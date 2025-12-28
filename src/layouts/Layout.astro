@@ -3,47 +3,57 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { SEO } from "../utils/AppConfig";
 
-const defaultProps = {  
+const defaultProps = {
   structuredData: SEO.structuredData,
 };
 
 interface Props {
-
   metatitle: string;
   metadescrip: string;
   slug: string;
   structuredData: object;
-  
 }
 
-const {metatitle, metadescrip, slug, structuredData = defaultProps.structuredData, } = Astro.props;
+const {
+  metatitle,
+  metadescrip,
+  slug,
+  structuredData = defaultProps.structuredData,
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es" >
-  <head>  
-  {
-  structuredData && (
-    <script is:inline
-      type="application/ld+json"
-      set:html={JSON.stringify(structuredData)}
-    />
-  )
-}
- 
+<html lang="es">
+  <head>
+    {
+      structuredData && (
+        <script
+          is:inline
+          type="application/ld+json"
+          set:html={JSON.stringify(structuredData)}
+        />
+      )
+    }
+
     <meta charset="UTF-8" />
     <title>{metatitle}</title>
     <meta name="description" content={metadescrip} />
     <meta name="viewport" content="width=device-width" />
-    <meta name="takeads-platform-verification" content="8fabb9f0-6aa1-425d-a65f-c9c95d3354f6">
+    <meta
+      name="takeads-platform-verification"
+      content="8fabb9f0-6aa1-425d-a65f-c9c95d3354f6"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.jpg" />
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/assets/estilos/app.css" />
-    <link rel="canonical" href={`https://mejorfibraoptica.site/${slug}`} />
+    <link rel="canonical" href={`https://internetzone.vercel.app/${slug}`} />
     <meta
       name="keywords"
       content="fibra optica, proveedores de fibra optica, velocidad de internet, routers, wifi"
-    />   
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -51,30 +61,33 @@ const {metatitle, metadescrip, slug, structuredData = defaultProps.structuredDat
       rel="stylesheet"
     />
     <meta name="robots" content="all" />
-    <meta name="google-adsense-account" content="ca-pub-1207813510935304">
+    <meta name="google-adsense-account" content="ca-pub-1207813510935304" />
     <!-- Twitter -->
     <meta property="twitter:title" content={metatitle} />
     <meta property="twitter:description" content={metadescrip} />
     <meta
-      property="twitter:image" 
-      content="https://mejorfibraoptica.site/assets/img/logo2.jpg"
+      property="twitter:image"
+      content="https://internetzone.vercel.app/assets/img/logo2.jpg"
     />
     <meta
       property="twitter:url"
-      content={`https://mejorfibraoptica.site/${slug}`}
+      content={`https://internetzone.vercel.app/${slug}`}
     />
     <meta property="twitter:card" content="summary_large_image" />
 
     <!-- Facebook -->
     <meta property="og:title" content={metatitle} />
     <meta property="og:description" content={metadescrip} />
-    <meta property="og:url" content={`https://mejorfibraoptica.site/${slug}`} />
+    <meta
+      property="og:url"
+      content={`https://internetzone.vercel.app/${slug}`}
+    />
     <meta
       property="og:image"
-      content="https://mejorfibraoptica.site/assets/img/logo2.jpg"
+      content="https://internetzone.vercel.app/assets/img/logo2.jpg"
     />
     <meta property="og:type" content="website" />
-    
+
     <script
       is:inline
       async
@@ -119,6 +132,5 @@ const {metatitle, metadescrip, slug, structuredData = defaultProps.structuredDat
       is:inline
       src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"
     ></script>
-   
   </body>
 </html>
