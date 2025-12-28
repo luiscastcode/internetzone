@@ -1,0 +1,87 @@
+   ---
+ 
+  const dataCiudad = [
+    {
+      id: 1,
+      nombre: "Valencia",
+      url: "valencia",
+    },
+    {
+      id: 2,
+      nombre: "Caracas",
+      url: "caracas",
+    },
+    {
+      id: 3,
+      nombre: "Maracaibo",
+      url: "maracaibo",
+    },
+    {
+      id: 4,
+      nombre: "Maracay",
+      url: "maracay",
+    },
+    {
+      id: 5,
+      nombre: "San Cristobal",
+      url: "san-cristobal",
+    },
+     {
+      id: 6,
+      nombre: "Barquisimeto",
+      url: "barquisimeto",
+    },
+    {
+      id: 7,
+      nombre: "San Fernando de Apure",
+      url: "san-fernando-de-apure",
+    },
+  ]
+    
+---
+
+<button
+  id="porCiudad"
+  data-dropdown-toggle="porCiudadHover"
+  data-dropdown-trigger="hover"
+  class="text-gray-500 hover:font-bold focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center inline-flex items-center"
+  type="button"
+  >Ciudad <svg
+    class="arrow w-2.5 h-2.5 ms-3"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 10 6"
+  >
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="m1 1 4 4 4-4"></path>
+  </svg>
+</button>
+
+<!-- Dropdown menu -->
+<div
+  id="porCiudadHover"
+  class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow max-w-96 dark:bg-gray-700"
+>
+  <ul
+    class="py-2 text-sm text-gray-700 bg-[#e2e8f0]"
+    aria-labelledby="porCiudad"
+  >
+    {
+      dataCiudad.map((item) => (
+        <li>
+          <a
+            href={`/internet-en/${item.url}/`}
+            class="block px-4 hover:font-bold"
+          >
+            Proveedores de Internet en {item.nombre}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

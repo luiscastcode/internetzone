@@ -1,0 +1,18 @@
+---
+const { tituloencabezado, subtitulo } = Astro.props;
+---
+
+<section
+  class="shadow-md bg-no-repeat bg-[url('/assets/img/bg3.jpg')] bg-cover rounded-md my-1"
+>
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-12">
+    <h1
+      class="mb-4 text-4xl text-gray-900 text-center tracking-tight leading-none md:text-5xl"
+    >
+      {tituloencabezado}
+    </h1>
+    <p class="mb-8 text-gray-500 text-center text-lg sm:px-16 xl:px-48">
+      {subtitulo}
+    </p>
+  </div>
+</section>

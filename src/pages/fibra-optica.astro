@@ -1,0 +1,327 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
+
+import Heading from "../components/Heading.astro";
+import Cta4 from "../components/Cta4.astro";
+import ListaProv from "../components/ListaProv.astro";
+import BotonSimple from "../components/BotonSimple.astro";
+import Cta2 from "../components/Cta2.astro";
+import Lista from "../components/Lista.astro";
+import Acordeon from "../components/Acordeon.astro";
+import Card from "../components/Card.astro";
+import CiudadLista from "../components/CiudadLista.astro";
+import CalculadoraVel from "../components/CalculadoraVel";
+import Cta3 from "../components/Cta3.astro";
+---
+
+<Layout
+  metatitle="Test de Velocidad | Comprueba Tu Velocidad de Internet"
+  metadescrip="Diferencia entre ancho de banda y velocidad de conexión, como saber si tu proveedor te da la velocidad contratada"
+  slug="fibra-optica/"
+  structuredData={{}}
+>
+  <Section>
+    <Heading
+      tituloencabezado="Test de Velocidad: Todo lo que Necesitas Saber para Elegir el Mejor Internet"
+      subtitulo="¿Cómo puedo ver la velocidad de Internet que tengo? Diferencia entre ancho de banda y velocidad de conexión, como saber si tu proveedor te da la velocidad contratada. Existen herramientas que te ayudan a medir la conexión y velocidad de tu internet."
+    />
+    <h2 class="text-center mb-4 capitalize border-b-8 border-amber-500">
+      Herramientas de Test de Velocidad
+    </h2>
+    <div
+      class="grid grid-cols-2 bg-slate-300 p-4 rounded-md justify-center items-center"
+    >
+      <Card
+        href="https://www.speedtest.net/es"
+        title="Speed Test"
+        body="De Ookla"
+        rel="noopener noreferrer"
+        target="_blank"
+      />
+      <Card
+        href="https://fiber.google.com/intl/es/speedtest/"
+        title="Google Fiber"
+        body="De Google"
+        rel="noopener noreferrer"
+        target="_blank"
+      />
+      <Card
+        href="https://fast.com/es/"
+        title="Fast"
+        body="De Netflix"
+        rel="noopener noreferrer"
+        target="_blank"
+      />
+      <Card
+        href="https://www.nperf.com/es/"
+        title="Nperf"
+        body="De Francia. ❤️"
+        rel="noopener noreferrer"
+        target="_blank"
+      />
+    </div>
+    <section class="my-8">
+      <h2 class="text-center mt-6 text-4xl border-b-8 border-amber-500 mb-2">
+        Velocidades de Conexión de Internet
+      </h2>
+      <div class="container flex flex-col md:flex-row mb-2">
+        <div class="w-full flex justify-center items-center">
+          <img
+            src="/assets/img/pub/wifihack.jpeg"
+            alt="elegir compañia"
+            class="rounded-md w-full"
+            width="600"
+          />
+        </div>
+
+        <div class="p-1 md:px-10">
+          <p class="text-justify mb-2">
+            ¿Cuáles son las velocidades de conexión de internet? ¿cómo saber
+            cuál es la mejor velocidad de internet que necesito? y ¿cuál es la
+            mejor velocidad para tu hogar? Vamos a explorar esto a fondo.
+          </p>
+
+          <p class="text-justify mb-2">
+            Cuando hablamos de velocidades de internet, generalmente nos
+            referimos a <span class="font-bold"
+              >Mbps (megabits por segundo) o Gbps (gigabits por segundo)</span
+            >. Un gigabit es igual a 1000 megabits, lo que significa que una
+            conexión de 1 Gbps es 1000 veces más rápida que una de 1 Mbps y se
+            refiere a la velocidad de carga y descarga, <span class="font-bold"
+              >no confundir con ancho de banda</span
+            > que basicamente son los planes que ofrecen los compañias isp.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="my-8">
+      <Cta3
+        ><h4
+          class="mb-2 text-2xl font-bold tracking-tight text-amber-400 text-center"
+        >
+          Como Optimizar Tu Velocidad de Internet
+        </h4>
+        <BotonSimple
+          nombtnsimple="Soluciones Rápidas"
+          urlbtnsimple="/guias-tutoriales/optimizar-velocidad-de-conexion-de-internet"
+          targtebtnsimple=""
+        /></Cta3
+      >
+    </section>
+    <h2 class="text-center mb-4 capitalize border-b-8 border-amber-500">
+      Ya tengo los datos del test de velocidad ¿Qué significan esos datos?
+    </h2>
+    <section class="my-8 grid grid-cols-1 md:grid-cols-2">
+      <div class="w-full flex justify-center items-center">
+        <img
+          src="/assets/img/ddh.jpg"
+          alt="velocidad internet"
+          class="rounded-md"
+        />
+      </div>
+      <div class="p-1 md:p-4">
+        <p class="text-justify mb-2">
+          Esto son los datos que verás despues de medir tu velocidad de internet
+          en algunas de las páginas recomendadas.
+        </p>
+        <Lista
+          titulolista="Velocidad de descarga"
+          listadescrip="Es la velocidad en la que tu dispositivo modem extrae datos de Internet. Medidos en Mbps o Gbps."
+        />
+        <Lista
+          titulolista="Velocidad de carga"
+          listadescrip="La velocidad a la que tu envías datos a Internet a traves del dispositivo modem. Medidos en Mbps o Gbps."
+        />
+        <Lista
+          titulolista="Latencia (Ping)"
+          listadescrip="Medidos en milisegundos, es la velocidad que tarda en viajar la señal desde tu dispositivo modem al servidor de internet ida y vuelta, una latencia más baja significa que tu conexión tiene un mejor tiempo de respuesta"
+        />
+        <Lista
+          titulolista="Proveedor"
+          listadescrip="La empresa que proporciona servicios de Internet en tu zona. Por ejemplo: Airtek, Thundernet y Fibex Telecom."
+        />
+        <Lista
+          titulolista="Dirección IP"
+          listadescrip="Protocolo de Internet: es el código numérico único que identifica cualquier dispositivo conectado a una red de Internet y su ubicación geográfica."
+        />
+        <Lista
+          titulolista="Ubicación de servidor"
+          listadescrip="La ubicación del servidor al que te conectas para ejecutar la prueba de velocidad."
+        />
+      </div>
+    </section>
+    <Cta4
+      titulocta4="Diferencias Entre Wifi 5 y Wifi 6"
+      urlbotoncta="router-wifi"
+      nomboton="Ver Difererencias"
+      descripcta="Para navegar a altas velocidades debes tener un router wifi-5 o wifi-6 que tenga puerto que soporte 1 Gigabit y que sea doble banda, aqui te damos algunas sugerencias."
+    />
+    <section id="calculadora" class="my-8">
+      <h2
+        class="mb-2 text-4xl font-semibold border-b-8 border-amber-500 text-center"
+      >
+        ¿Cuánta Velocidad Necesito?
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="w-full">
+          <CalculadoraVel client:visible />
+        </div>
+        <div class="container flex flex-col">
+          <div class="p-1 md:px-4">
+            <Lista
+              titulolista="1. Uso Básico (Navegación, Redes Sociales y Correo)"
+              listadescrip="Velocidad recomendada: 10-25 Mbps. Si en tu hogar solo se utilizan dispositivos para tareas sencillas como navegar por internet, revisar correos y usar redes sociales, una velocidad básica de entre 10 y 25 Mbps será suficiente."
+            />
+            <Lista
+              titulolista="2. Streaming de Video (HD y 4K)"
+              listadescrip="Velocidad recomendada: 25-100 Mbps. Para streaming de videos en alta definición (HD), necesitas al menos 25 Mbps. Si ves videos en 4K, es recomendable tener al menos 50-100 Mbps para evitar interrupciones."
+            />
+            <Lista
+              titulolista="3. Juegos en Línea"
+              listadescrip="Velocidad recomendada: 50-100 Mbps. Los juegos en línea requieren una velocidad constante y una baja latencia. Con 50 Mbps o más, varios jugadores pueden disfrutar sin problemas de conexión o lag."
+            />
+            <Lista
+              titulolista="4. Trabajar desde Casa (Videoconferencias y Transferencia de Archivos)"
+              listadescrip="Velocidad recomendada: 50-200 Mbps. Para videoconferencias en HD, compartir archivos grandes y trabajar con servicios en la nube, se recomienda una velocidad de al menos 50 Mbps. Si hay varios dispositivos conectados al mismo tiempo, podrías necesitar hasta 200 Mbps."
+            />
+            <Lista
+              titulolista="5. Hogar Inteligente y Dispositivos Conectados"
+              listadescrip="Velocidad recomendada: 100-300 Mbps. Si en tu hogar hay varios dispositivos conectados como cámaras de seguridad, termostatos inteligentes, y sistemas de automatización del hogar, necesitas una velocidad robusta de 100-300 Mbps."
+            />
+            <Lista
+              titulolista="6. Familias Grandes y Uso Intensivo"
+              listadescrip="Velocidad recomendada: 300 Mbps o más. Para familias grandes con varios usuarios que realizan actividades exigentes simultáneamente, como streaming en 4K, gaming, y videoconferencias, una velocidad de 300 Mbps o más es ideal."
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="text-center mt-6 border-b-8 border-amber-500 mb-2">
+      Preguntas Frecuentes
+    </h2>
+
+    <div id="accordion-collapse" data-accordion="collapse">
+      <Acordeon
+        id="1"
+        expandir="true"
+        pregunta="¿Qué es FTTH?"
+        respuesta="FTTH (acrónimo del inglés Fiber To The Home), también conocida como fibra hasta la casa o fibra hasta el hogar."
+      />
+      <Acordeon
+        id="2"
+        expandir="false"
+        pregunta="¿Qué es un router ONU?"
+        respuesta="La ONU GPON (Optical Network Unit) es un dispositivo utilizado en redes de fibra óptica para proporcionar conectividad de alta velocidad a los usuarios finales."
+      />
+      <Acordeon
+        id="3"
+        expandir="false"
+        pregunta="¿Qué es un ONT?"
+        respuesta="Optical Network Terminal es un dispositivo encargado de convertir la señal óptica del cable de la fibra óptica en señal digital."
+      />
+      <Acordeon
+        id="4"
+        expandir="false"
+        pregunta="¿Qué es velocidad simétrica?"
+        respuesta="La velocidad simétrica o fibra simétrica es una conexión de Internet que ofrece la misma velocidad de subida y de descarga."
+      />
+      <Acordeon
+        id="5"
+        expandir="false"
+        pregunta="¿Cuánto cuesta la instalación del servicio de internet por fibra óptica en Venezuela?"
+        respuesta="Depende del compañia, algunos incluyen la primera mensualidad, otros te lo financian pero esta alrdedor de los 50$ solo la instalación con kits de instalación (metrode de cables y router ONT)."
+      />
+      <Acordeon
+        id="6"
+        expandir="false"
+        pregunta="¿Qué diferencia hay entre ancho de banda y velocidad de conexión?"
+        respuesta="El ancho de banda es la capacidad máxima de la conexión, pero la velocidad es la tasa real a la que se transfieren los datos. Ej: contratas un plan de 100Mbps(ancho de banda) pero cuando mides la conexión de internet te dice: 50Mpbs de descarga 30 Mbps de carga (estas son las velocidades)."
+      />
+      <Acordeon
+        id="7"
+        expandir="false"
+        pregunta="¿Por qué cuando mido la velocidad de internet me da un valor más bajo que mi plan contratado?"
+        respuesta="La velocidad nunca será igual al plan contratado, siempre será más bajo pero tampoco puede ser menos del 80% de la capacidad del ancho de banda, si contrataste un plan de 200Mbps pero la velocidad es de solo 50Mbps de descarga entonces puede ser tu router que no soporta el ancho de banda."
+      />
+      <Acordeon
+        id="8"
+        expandir="false"
+        pregunta="¿Qué es la latencia?"
+        respuesta="Es el tiempo que tarda un paquete de datos en viajar desde un punto a otro de la red. Se mide en milisegundos y afecta directamente a la rapidez con la que se responden las solicitudes en internet, como en los juegos en línea o las videoconferencias."
+      />
+      <Acordeon
+        id="9"
+        expandir="false"
+        pregunta="¿Qué es el ping?"
+        respuesta="Es una medida de la latencia, específicamente el tiempo que tarda una pequeña cantidad de datos en ir y volver a un servidor. Un ping bajo indica una conexión rápida y estable."
+      />
+    </div>
+
+    <section class="my-8">
+      <h2 class="text-center mt-6 border-b-8 border-amber-500 mb-2 capitalize">
+        Ventajas de usar internet por fibra óptica
+      </h2>
+      <div class="container flex flex-col md:flex-row">
+        <div class="p-1 md:px-10">
+          <Lista
+            titulolista="Velocidad de Carga, Velocidad Descarga y Ancho de banda"
+            listadescrip="La fibra óptica puede ofrecer velocidades de carga y descarga hasta 1 Gbps o más, lo cual es ideal para hogares y empresas que necesitan manejar grandes volúmenes de carga y descarga de datos pero debes tener un router wifi-5 o wifi-6 que soporte por lo menos 1 Gbps del ancho de banda."
+          />
+          <Lista
+            titulolista="Estabilidad"
+            listadescrip="La señal de fibra óptica es menos susceptible a interferencias externas, a diferencia de las conexiones tradicionales, la fibra óptica no sufre tanto por interferencias eléctricas o degradación de la señal a largas distancias."
+          />
+          <Lista
+            titulolista="Latencia Baja"
+            listadescrip="Esto es crucial para aplicaciones en tiempo real como videollamadas y juegos en línea, donde cada milisegundo cuenta."
+          />
+          <Lista
+            titulolista="Futuro"
+            listadescrip="La fibra óptica es la tecnología del futuro. A medida que las demandas de internet sigan creciendo, la fibra óptica seguirá siendo la opción más rápida y confiable."
+          />
+          <Lista
+            titulolista="Mejor para los videojuegos"
+            listadescrip="Una pequeña falla puede hacer que te maten en tu juego favorito, y una conexión por cable o DSL suele presentar muchas fallas de este tipo."
+          />
+          <p class="text-justify mb-2">
+            La fibra óptica llego para quedarse y estará aqui por mucho tiempo,
+            asi que lo unico que tendras que hacer es buscar un compañia de
+            internet cerca de ti, acorde a tu presupuesto para poder navegar en
+            internet, ver tus videos sin interrupciones, escuchar música y
+            muchas horas de entretenimiento.
+          </p>
+        </div>
+        <div class="w-full flex justify-center items-center">
+          <img
+            src="/assets/img/rr.webp"
+            alt="elegir fibra"
+            class="rounded-md"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="my-8">
+      <Cta3
+        ><h4 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+          Te puede interesar
+        </h4>
+        <BotonSimple
+          nombtnsimple="Blog Guias Tutoriales"
+          urlbtnsimple="/guias-tutoriales/"
+          targtebtnsimple=""
+        /></Cta3
+      >
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-1 bg-slate-300 p-4 rounded-md"
+      >
+        <CiudadLista />
+        <ListaProv />
+      </div>
+    </section>
+    <Cta2 />
+  </Section>
+</Layout>

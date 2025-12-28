@@ -1,0 +1,277 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/Section.astro";
+import TarjetaPrecio from "../../components/TarjetaPrecio.astro";
+import Cta from "../../components/Cta.astro";
+import Cta4 from "../../components/Cta4.astro";
+import Valoracion from "../../components/Valoracion.astro";
+import DuoBoton from "../../components/DuoBoton.astro";
+import Lista from "../../components/Lista.astro";
+import Cta3 from "../../components/Cta3.astro";
+import BotonSimple from "../../components/BotonSimple.astro";
+---
+
+<Layout
+  metatitle="Perfil Datanet Proveedor de Internet Por Fibra Óptica"
+  metadescrip="Conoce a Datanet una de las empresas que provee internet por fibra optica mas solidas de Barquisimeto consulta zonas de cobertura, planes y precios."
+  slug="proveedor/datanet/"
+>
+  <Section>
+    <h1 class="mt-10">Datanet Proveedor de Internet Por Fibra Óptica</h1>
+
+    <div class="grid grid-cols md:grid-cols-2 justify-center gap-2 my-10">
+      <div>
+        <img
+          class="rounded-t-lg p-4"
+          src="../../proveedores/datanet.png"
+          alt="Empresa Fibra Optica Datanet"
+        />
+      </div>
+      <div class="flex flex-col">
+        <h2 class="mt-2 text-center">Sobre Datanet</h2>
+        <p class="mb-2 text-justify">
+          Datanet es un proveedor de servicios de internet con
+          sede principal en Barquisimeto, estado Lara. La empresa se especializa
+          en ofrecer soluciones de conectividad tanto para usuarios
+          residenciales como empresariales, con un enfoque en la calidad de
+          servicio y la atención al cliente.
+        </p>
+        <div class="flex justify-center items-center">
+          <BotonSimple
+            nombtnsimple="Consulta Todas La Oficinas Datanet"
+            urlbtnsimple="https://datanetvzla.com/"
+            targtebtnsimple="_blank"
+          />
+        </div>
+      </div>
+    </div>
+  
+
+  <div
+    class="grid grid-col md:grid-cols-2 justify-center items-center gap-2 p-4 bg-slate-50 border border-solid border-gray-500 rounded-md"
+  >
+    <div class="p-2">
+      <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+        Valoración General
+      </h2>
+      <Valoracion
+        valorgeneral="8.0"
+        valoracion="Esta muy bien pero ofrece poca info en su web"
+        porcentajecobertura="80%"
+        puntoscobertura="8.3"
+        porcentajeatc="85%"
+        puntosatc="8.5"
+        porcentajeplanes="80%"
+        puntosplanes="8.0"
+        porcentajevelocidad="90%"
+        puntosvelocidad="9.3"
+      />
+      <DuoBoton nomproveedor="Datanet" slug="datanet" />
+    </div>
+
+    <div
+      class="p-3 border-t-2 md:border-t-0 sm:border-l-0 md:border-l-2 border-slate-400"
+    >
+      <h2 class="mt-2 text-center">Zonas de Cobertura Datanet</h2>
+      <p class="text-justify">
+        Zonas: cobertura Datanet este
+        Barquisimeto, oeste, norte, centro, cobertura Datanet EL Cuji, cobertura
+        Datanet Tamaca, cobertura Datanet Torres. Garantizan que la señal llegue
+        hasta los lugares más remotos y así brindarte el servicio ininterrumpido
+        que necesitas, consulta todas sus zonas de cobertura
+      </p>
+      <div class="flex justify-center items-center">
+        <BotonSimple
+          nombtnsimple="Consulta Todas La Cobertura Datanet"
+          urlbtnsimple="https://datanetvzla.com/"
+          targtebtnsimple="_blank"
+        />
+      </div>
+    </div>
+  </div>
+  <Cta3>
+    <div
+      class="grid grid-row md:grid-cols-3 gap-1 justify-center items-center mx-auto"
+    >
+      <BotonSimple
+        nombtnsimple="Guias Tutoriales"
+        urlbtnsimple="/guias-tutoriales/"
+        targtebtnsimple=""
+      />
+      <BotonSimple
+        nombtnsimple="Internet En Barquisimeto"
+        urlbtnsimple="/internet-en/barquisimeto/"
+        targtebtnsimple=""
+      />
+      <BotonSimple
+        nombtnsimple="Guia Compra Router Wifi 2024"
+        urlbtnsimple="/guias-tutoriales/9-mejores-routers-wifi6-para-comprar-2024/"
+        targtebtnsimple=""
+      />
+    </div>
+  </Cta3>
+  <div class="flex flex-col p-4">
+    <div id="servicios" class="flex flex-col">
+      <h2 class="font-bold text-center border-b-8 border-amber-500">
+        Datanet Planes y Precios
+      </h2>
+      <p class="mt-4 text-justify">
+        <span class="font-bold"
+          >El costo de instalación de los servicios de internet de Datanet</span
+        > puede variar dependiendo del tipo de plan y la ubicación específica del
+        cliente. Generalmente, Datanet maneja tarifas accesibles para la instalación,
+        y en algunos casos, realiza promociones o descuentos en los costos de instalación
+        para nuevos clientes. Este tipo de beneficios facilita que más usuarios puedan
+        acceder a un servicio de calidad sin enfrentar altos costos iniciales.
+      </p>
+      <p class="mt-4 text-justify">
+        La <span class="font-bold"
+          >instalación es gratis e incluyen Kit de instalación, 100 metros de
+          Fibra Óptica + ONU (Modem).</span
+        > Además, con solo clickear unos cuantos botones tendrás acceso inmediato
+        a todos los servicios adicionales diseñados especialmente para hacer del
+        internet una experiencia única, en todas las ciudades habrá un toldo con
+        asesores esperando por ti.
+      </p>
+      <p class="mt-4 text-justify">
+        Además, Datanet ofrece un plan comercial que garantiza un internet
+        dedicado 100%, ideal para empresas que requieren conexiones confiables y
+        sin interrupciones. Este plan incluye soporte técnico 24/7 y una
+        conexión punto a punto, asegurando la continuidad de las operaciones
+        comerciales.
+      </p>
+
+      <div class="flex flex-col justify-center items-center mx-auto my-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 my-4">
+          <TarjetaPrecio
+            nombreplan="Residencial"
+            precio="25"
+            item1="400 Mbps - 25$+IVA"
+            item2="700 Mbps - 30$+IVA"
+            item3="Incluye Kit de instalación"
+            item4="Instalación GRATIS"
+            url1="https://datanetvzla.com/#astro"
+          />
+
+          <TarjetaPrecio
+            nombreplan="Empresa"
+            precio="40"
+            item1="1 Gbps"
+            item2="Fibra Óptica interurbana"
+            item3="Fibra óptica propia"
+            item4="Instalación GRATIS"
+            url1="https://datanetvzla.com/#astro"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <Cta4
+    titulocta4="Guia de Routers"
+    urlbotoncta="router-wifi"
+    nomboton="Ver Guia"
+    descripcta="Si necesitan comprar un router wifi-5 o wifi-6 que tenga puerto que soporte 1 Gigabit y que sea doble banda, si no sabes cual, aqui te damos algunas sugerencias."
+  />
+  <div id="pagos" class="my-10">
+    <h2 class="font-bold text-center border-b-8 border-amber-500">
+      Descubre los métodos de pagos Datanet
+    </h2>
+    <p class="mt-4 text-justify">
+      Datanet no informa en web sus métodos de pago, consulta el metodo pago en
+      su <span class="font-semibold text-amber-500"
+        ><a href="https://datanetvzla.com/#astro" target="_blank">portal</a
+        ></span
+      >.
+    </p>
+
+    <ol class="w-full space-y-1 list-decimal list-inside my-8">
+      <li>
+        <span class="font-semibold text-indigo-500">Pago Movil</span> desde <span
+          class="font-semibold text-indigo-500">cualquier banco</span
+        > puedes hacer tu pago.
+      </li>
+      <li>
+        <span class="font-semibold text-indigo-500"
+          >Transferencia bancarias</span
+        > para transferencias nacionales.
+      </li>
+
+      <a
+        href="https://www.instagram.com/datanet.vzla/"
+        target="_blank"
+        class="text-white w-full bg-[#2557D6] justify-center hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none font-medium rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#2557D6]/50 me-2 mb-2"
+      >
+        <svg
+          aria-hidden="true"
+          class="w-10 h-3 me-2 -ms-1"
+          viewBox="0 0 256 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            d="M28.812 0L0 63.76H34.492L38.768 53.594H48.542L52.818 63.76H90.784V56.001L94.167 63.76H113.806L117.189 55.837V63.76H196.148L205.749 53.858L214.739 63.76L255.294 63.842L226.391 32.058L255.294 0H215.368L206.022 9.71899L197.315 0H111.418L104.042 16.457L96.493 0H62.073V7.495L58.244 0C58.244 0 28.812 0 28.812 0ZM35.486 9.05399H52.299L71.41 52.29V9.05399H89.828L104.589 40.054L118.193 9.05399H136.519V54.806H125.368L125.277 18.955L109.02 54.806H99.045L82.697 18.955V54.806H59.757L55.408 44.549H31.912L27.572 54.797H15.281C15.281 54.797 35.486 9.05399 35.486 9.05399ZM146.721 9.05399H192.063L205.931 24.034L220.246 9.05399H234.114L213.043 32.049L234.114 54.779H219.617L205.749 39.625L191.361 54.779H146.721V9.05399ZM43.665 16.795L35.924 35.067H51.397L43.665 16.795ZM157.918 18.527V26.879H182.654V36.188H157.918V45.306H185.663L198.555 31.876L186.21 18.519H157.918V18.527Z"
+            fill="white"></path></svg
+        >
+        Instagram Datanet
+      </a>
+    </ol>
+
+    <div id="ventajas" class="my-10">
+      <h2 class="font-bold text-center border-b-8 border-amber-500">
+        ¿Por qué elegir Datanet?
+      </h2>
+      <Lista
+        titulolista="Cobertura"
+        listadescrip="Datanet centra su cobertura en el estado Lara, con especial énfasis en la ciudad de Barquisimeto, El Cuji, Torres, Tamaca."
+      />
+      <Lista
+        titulolista="Velocidad"
+        listadescrip="Datanet se enfoca en ofrecer un servicio de alta velocidad con baja latencia, ideal para aquellos que necesitan internet para trabajo remoto, videollamadas, o entretenimiento en línea como el streaming y los juegos, puedes empezar con un plan Datanet de 400 Mbps, siempre ilimitado."
+      />
+      <Lista
+        titulolista="Precio Datanet"
+        listadescrip="Datanet ofrece una gama de planes basados en la tecnología de fibra óptica, permitiendo a los usuarios disfrutar de velocidades competitivas. Empieza con un servicio de internet ilimitado por $25+IVA/mes con instalación gratis."
+      />
+      <Lista
+        titulolista="Servicios Adicionales"
+        listadescrip="Para los clientes empresariales, Datanet también proporciona soluciones de conectividad avanzada, como enlaces dedicados y conexiones privadas de alta velocidad, diseñadas para soportar actividades de alto rendimiento y garantizar la estabilidad en operaciones comerciales."
+      />
+      <Lista
+        titulolista="Atención al cliente"
+        listadescrip="Servicio al Cliente: +58 412-6055300 - Whatsapp: +58 412-6055300."
+      />
+
+      <div id="ventajas" class="my-10">
+        <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+          Reseña Datanet
+        </h2>
+        <p class="mb-2 text-justify">
+          Gracias a su infraestructura
+          tecnológica, Datanet promete conexiones estables y rápidas, siendo una
+          opción ideal para quienes buscan una conexión confiable para
+          teletrabajo, educación en línea, entretenimiento, o gestión
+          empresarial.
+        </p>
+        <p class="mt-4 text-justify">
+          Datanet se destaca en el mercado venezolano de telecomunicaciones por
+          su enfoque en la atención al cliente y la estabilidad de sus
+          servicios, ofreciendo planes flexibles y precios competitivos. Su
+          enfoque en la satisfacción del usuario y su comprensión de las
+          necesidades locales le han permitido posicionarse como un proveedor de
+          confianza en Barquisimeto y áreas cercanas. Además, sus servicios
+          adicionales y su compromiso con la mejora continua hacen que sea una
+          opción recomendable para quienes buscan un proveedor de internet local
+          con buenas referencias y experiencia.
+        </p>
+
+        <Cta
+          titulocta="Contacto Datanet"
+          descripcta="Contactalos en su instagram"
+          urlbotoncta="https://datanetvzla.com/"
+          urlbotoncta2="https://www.instagram.com/datanet.vzla/?hl=es"
+          nomboton="Contacto Instagram Datanet"
+        />
+      </div>
+    </div>
+  </div>
+</Section>
+</Layout>

@@ -1,0 +1,240 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/Section.astro";
+import TarjetaPrecio from "../../components/TarjetaPrecio.astro";
+import Cta from "../../components/Cta.astro";
+import DuoBoton from "../../components/DuoBoton.astro";
+import Valoracion from "../../components/Valoracion.astro";
+import Lista from "../../components/Lista.astro";
+import Cta4 from "../../components/Cta4.astro";
+
+---
+
+<Layout
+  metatitle="➤〖TecnoNet〗| Proveedor de Internet en Venezuela"
+  metadescrip="Consulta zonas de cobertura, planes y precios TecnoNet, para toda la zona metropolitana de Puerto La Cruz en el Estado Anzoátegui."
+  slug="proveedor/tecnonet/"
+>
+  <Section>
+    <h1 class="mt-10">Proveedor de Internet en Venezuela</h1>
+    <h2 class="mt-2 text-center">Reseña TecnoNet</h2>
+    <div class="grid grid-cols md:grid-cols-2 justify-center gap-2 my-10">
+      <div class="flex justify-center items-center mx-auto">
+        <img
+          class="rounded-t-lg p-4"
+          src="../../proveedores/tecnonet.jpg"
+          alt="Empresa Fibra Optica TecnoNet"
+        />
+      </div>
+      <div class="flex flex-col">
+        <p class="mb-2 text-justify">
+          TecnoNet es una empresa proveedora de servicios de internet que ha
+          ganado relevancia en Venezuela, especialmente en toda la zona
+          metropolitana de Barcelona y Lecheria en el Estado Anzoátegui. Su
+          enfoque está en ofrecer conectividad a través de la fibra óptica para
+          hogares y negocios, con el objetivo de contribuir a la transformación
+          digital de la región. Con años de experiencia, TecnoNet se destaca por
+          ofrecer servicios confiables y de alta calidad, manteniendo a sus
+          clientes conectados a un mundo digital en constante evolución.
+        </p>
+        <DuoBoton nomproveedor="TecnoNet" slug="tecnonet" />
+      </div>
+    </div>
+    <div
+      class="grid grid-col md:grid-cols-2 justify-center items-center gap-2 p-4 bg-slate-50 border border-solid border-gray-500 rounded-md"
+    >
+      <div class="p-2">
+        <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+          Valoración General
+        </h2>
+        <Valoracion
+          valorgeneral="7.8"
+          valoracion="Muy buena opción en Puerto La Cruz Y Lecheria"
+          porcentajecobertura="70%"
+          puntoscobertura="7.3"
+          porcentajeatc="80%"
+          puntosatc="8.2"
+          porcentajeplanes="85%"
+          puntosplanes="8.5"
+          porcentajevelocidad="70%"
+          puntosvelocidad="7.3"
+        />
+      </div>
+      <div
+        class="p-3 border-t-2 md:border-t-0 sm:border-l-0 md:border-l-2 border-slate-400"
+      >
+        <p class="text-justify">
+          La sede principal de TecnoNet está ubicada en el Centro Comercial MT
+          en Lechería, una de las áreas clave de la zona metropolitana del
+          Estado Anzoátegui. Además de Lechería, TecnoNet tiene oficinas en
+          Barcelona y Nueva Barcelona, ampliando su cobertura en la región.
+        </p>
+        <p class="text-justify">
+          Aunque su presencia es local, la empresa está continuamente
+          expandiendo su infraestructura para llegar a más clientes.
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-col p-4">
+      <div id="servicios" class="flex flex-col">
+        <h2 class="font-bold text-center border-b-8 border-amber-500">
+          Tecnonet Planes y Precios
+        </h2>
+        <p class="mt-4 text-justify">
+          TecnoNet ofrece distintos planes basados en la tecnología de fibra
+          óptica, lo que garantiza una conexión más rápida y estable en
+          comparación con otros servicios. <span class="font-bold"
+            >Entre sus principales planes destacan</span
+          >
+          los de “Fibra Cool” y “Fibra Óptica”, adaptados para diferentes necesidades
+          de velocidad y consumo de datos.
+        </p>
+        <p class="mt-4 text-justify">
+          Los detalles específicos de precios no están completamente disponibles
+          en su sitio web, pero los clientes pueden contactarlos directamente
+          para obtener cotizaciones personalizadas según sus necesidades.
+        </p>
+        <p class="mt-4 text-justify">
+          <span class="font-bold">Costo de Instalación:</span> el costo de instalación
+          varía dependiendo de la ubicación del cliente y el tipo de plan elegido.
+          En muchos casos, la instalación de la fibra óptica requiere una evaluación
+          técnica previa para determinar las condiciones de la infraestructura existente.
+          TecnoNet ha simplificado este proceso, permitiendo que los usuarios gestionen
+          sus servicios y pagos a través de su oficina virtual​
+        </p>
+        <div class="flex flex-col justify-center items-center mx-auto my-4">
+          <div class="grid grid-cols-1 md:grid-cols-4 my-4">
+            <TarjetaPrecio
+              nombreplan="Fibra Home"
+              precio="?"
+              item1="50 Mbps"
+              item2="Perfecto para el hogar pequeño"
+              item3="Ideal para menos de 10 dispositivos"
+              item4="Servicio de Internet Continuo y Estable las 24h"
+              url1="https://tecnonet.com.ve/#planes"
+            />
+            <TarjetaPrecio
+              nombreplan="Fibra Familiar"
+              precio="?"
+              item1="100 Mbps"
+              item2="Más velocidad"
+              item3="Multiples conexiones"
+              item4="Jugar en Línea Múltiples Usuarios"
+              url1="https://tecnonet.com.ve/#planes"
+            />
+            <TarjetaPrecio
+              nombreplan="Fibra Ultra"
+              precio="?"
+              item1="200 Mbps"
+              item2="Perfecto para el cyber"
+              item3="Ideal para +10 dispositivos"
+              item4="Servicio de Internet Continuo y Estable las 24h"
+              url1="https://tecnonet.com.ve/#planes"
+            />
+            <TarjetaPrecio
+              nombreplan="Fibra Premiun"
+              precio="?"
+              item1="300 Mbps"
+              item2="Ideal para oficinas comerciales"
+              item3="Multiples conexiones"
+              item4="Jugar en Línea Múltiples Usuarios"
+              url1="https://tecnonet.com.ve/#planes"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <Cta4
+      titulocta4="Guia de Routers"
+      urlbotoncta="router-wifi"
+      nomboton="Ver Guia"
+      descripcta="Si necesitan comprar un router wifi-5 o wifi-6 que tenga puerto que soporte 1 Gigabit y que sea doble banda, si no sabes cual, aqui te damos algunas sugerencias."
+    />
+    <div id="pagos" class="my-10">
+      <h2 class="font-bold text-center border-b-8 border-amber-500">
+        Descubre los métodos de pagos de de TecnoNet
+      </h2>
+      <p class="mt-4 text-justify">
+        TecnoNet te ofrece diferentes medios de pago que estan disponibles en su
+        aplicación de pago pero entre estas estan:
+      </p>
+
+      <ol class="w-full space-y-1 list-decimal list-inside my-8">
+        <li>
+          <span class="font-semibold text-amber-500">Pago Movil TecnoNet</span>
+        </li>
+        <li>
+          <span class="font-semibold text-amber-500"
+            >Transferencia bancarias</span
+          >.
+        </li>
+
+        <li>
+          <span class="font-semibold text-amber-500">Banca en linea</span>
+        </li>
+        <li>
+          <span class="font-semibold text-amber-500">TecnoNet Zelle</span>
+          para pagos en dolares.
+        </li>
+        <li>
+          <span class="font-semibold text-amber-500">Efectivo</span> En su sedes
+          comerciales para pagos en Bs y en dolares.
+        </li>
+      </ol>
+      <a
+        href="https://servicecenter.myservy.com/ES/inicio-sesion/4165tecnonet"
+        target="_blank"
+        class="text-white w-full bg-[#2557D6] justify-center hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none font-medium rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#2557D6]/50 me-2 mb-2"
+      >
+        <svg
+          aria-hidden="true"
+          class="w-10 h-3 me-2 -ms-1"
+          viewBox="0 0 256 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            d="M28.812 0L0 63.76H34.492L38.768 53.594H48.542L52.818 63.76H90.784V56.001L94.167 63.76H113.806L117.189 55.837V63.76H196.148L205.749 53.858L214.739 63.76L255.294 63.842L226.391 32.058L255.294 0H215.368L206.022 9.71899L197.315 0H111.418L104.042 16.457L96.493 0H62.073V7.495L58.244 0C58.244 0 28.812 0 28.812 0ZM35.486 9.05399H52.299L71.41 52.29V9.05399H89.828L104.589 40.054L118.193 9.05399H136.519V54.806H125.368L125.277 18.955L109.02 54.806H99.045L82.697 18.955V54.806H59.757L55.408 44.549H31.912L27.572 54.797H15.281C15.281 54.797 35.486 9.05399 35.486 9.05399ZM146.721 9.05399H192.063L205.931 24.034L220.246 9.05399H234.114L213.043 32.049L234.114 54.779H219.617L205.749 39.625L191.361 54.779H146.721V9.05399ZM43.665 16.795L35.924 35.067H51.397L43.665 16.795ZM157.918 18.527V26.879H182.654V36.188H157.918V45.306H185.663L198.555 31.876L186.21 18.519H157.918V18.527Z"
+            fill="white"></path></svg
+        >
+        Todos Los Medios de Pago TecnoNet
+      </a>
+    </div>
+    <div id="ventajas" class="my-10">
+      <h2 class="font-bold text-center border-b-8 border-amber-500">
+        ¿Por qué elegir Tecnonet?
+      </h2>
+      <Lista
+        titulolista="Cobertura"
+        listadescrip="Lideres en la zona de Barcelona y Lecheria."
+      />
+      <Lista
+        titulolista="Velocidad"
+        listadescrip="Tienes planes necesarios para navegar con holgura, gracias a su red de fibra óptica, TecnoNet ofrece conexiones más rápidas y estables, ideales para hogares y negocios que dependen de internet para tareas cotidianas y laborales."
+      />
+      <Lista
+        titulolista="Precio Tecnonet"
+        listadescrip="Consultar directamente con ellos."
+      />
+      <Lista
+        titulolista="Servicios Adicionales"
+        listadescrip="Solo ofrecen internet por fibra óptica, también cuentan con aplicaciones móviles disponibles en Google Play y App Store para una experiencia más accesible​."
+      />
+      <Lista
+        titulolista="Atención al cliente"
+        listadescrip="La empresa dispone de una oficina virtual donde los clientes pueden gestionar sus pagos, verificar el estado de su servicio, y solicitar asistencia técnica en línea​ - Whatsapp: 0424-8995674"
+      />
+    </div>
+    <div id="cobertura" class="my-10">
+      <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+        ¿Hay Cobertura De Internet TecnoNet En Mi zona?
+      </h2>
+      <Cta
+        titulocta="Oficinas Comerciales TecnoNet"
+        descripcta="En cuanto a la cobertura, la empresa se centra en brindar servicio a varias áreas de Anzoátegui, lo que permite a los residentes de estas zonas disfrutar de internet de alta velocidad."
+        urlbotoncta="https://tecnonet.com.ve"
+        urlbotoncta2="https://tecnonet.com.ve/contactanos/#formulario-de-contacto"
+        nomboton="Consultar Internet En Mi Zona"
+      />
+    </div>
+  </Section>
+</Layout>

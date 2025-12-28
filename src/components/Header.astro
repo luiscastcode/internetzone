@@ -1,0 +1,58 @@
+---
+import DropdownProveed from "./DropdownProveed.astro";
+import InternetEnNav from "./InternetEnNav.astro";
+ 
+import NavMovil from "./NavMovil";
+import Links from "./Links.astro";
+import NavGuias from "./NavGuias.astro";
+
+const navData = [
+ 
+   
+  { id: 1, nombre: "Blog", ruta: "/guias-tutoriales/" },
+  { id: 3, nombre: "Tienda", ruta: "/kits-de-instalacion/" },
+  { id: 2, nombre: "Buscar por Ciudad", ruta: "/internet-en/" },
+  
+];
+---
+
+<nav class="bg-[#03022e]">
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1"
+  >
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img
+        src="../../assets/img/fibra_logo.jpg"
+        class="h-10 md:h-10 rounded-sm"
+        alt="Mi Logo"
+      />
+      <span
+        class="self-center text-lg md:text-xl uppercase font-semibold whitespace-nowrap text-slate-200"
+        >Mejor Fibra Óptica</span
+      >
+    </a>
+
+    <div class="hidden w-full md:block md:w-auto menudrop" id="navbar-dropdown">
+      <ul
+        class="inline-flex mt-4 border-gray-100 rounded-lg bg-gray-50"
+      >
+        
+        <li>
+          <DropdownProveed />
+        </li>
+        <li>
+          <InternetEnNav />
+        </li>
+        <li>
+          <NavGuias />
+        </li>
+        {navData.map((item) => <Links href={item.ruta} text={item.nombre} />)}
+         
+      </ul>
+    </div>
+    <NavMovil client:visible />
+  </div>
+</nav>
+<script>
+  import '../js/navlink.js'
+</script>

@@ -1,0 +1,465 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Section from "../components/Section.astro";
+import Buscador from "../components/Buscador.jsx";
+import Lista from "../components/Lista.astro";
+
+import Cta3 from "../components/Cta3.astro";
+import BotonSimple from "../components/BotonSimple.astro";
+import Cta2 from "../components/Cta2.astro";
+import Destacados from "../components/Destacados.astro";
+import { formatearBlogPost } from "../utils/AppConfig";
+import PostAleatorios from "../components/PostAleatorios.astro";
+
+import Cta4 from "../components/Cta4.astro";
+import DonarPaypal from "../components/DonarPaypal.astro";
+
+import TopCiudades from "../components/TopCiudades.astro";
+
+const allPosts = await Astro.glob("../pages/guias-tutoriales/*.md");
+const postFormateado = formatearBlogPost(allPosts);
+
+const publicacionesAleatorias = postFormateado.slice(0, 6);
+---
+
+<Layout
+  metatitle="Encuentra Empresas de Internet En Venezuela"
+  metadescrip="Compara empresas de internet en tu zona, empresas de internet en Caracas, empresas de internet en Valencia, empresas de internet en Barquisimeto."
+  slug=""
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://mejorfibraoptica.site",
+    "url": "https://mejorfibraoptica.site",
+    "name": "Encuentra Empresas de Internet En Venezuela",
+    "description":
+      "Compara empresas de internet en tu área o ciudad, empresas en Caracas, empresas en Valencia, empresas en Barquisimeto, muchas más ciudades y empresas.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": "https://mejorfibraoptica.site",
+      "name": "Mejor Fibra Óptica",
+      "description":
+        "Compara empresas de internet en tu área o ciudad, empresas en Caracas, empresas en Valencia, empresas en Barquisimeto, muchas más ciudades y empresas.",
+    },
+    "inLanguage": "es-ES"
+  }}
+>
+
+  <section class="bg-linear-to-r from-cyan-500 to-blue-500">
+    <div
+      class="container flex flex-col mx-auto px-2 md:px-40 justify-center items-center my-16 md:my-32"
+    >
+      <div class="">
+        <a
+          href="/#mejores"
+          class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+          role="alert"
+        >
+          <span
+            class="text-xs bg-indigo-600 rounded-full text-yellow-200 px-4 py-1.5 mr-3"
+            >Mira</span
+          >
+          <h4 class="text-sm font-medium">
+            ¿cuál es el mejor proveedor de internet de venezuela?
+          </h4>
+          <svg
+            class="ml-2 w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd"></path></svg
+          >
+        </a>
+      </div>
+
+      <div class="max-w-3xl">
+        <h1
+          class="mb-4 text-center text-4xl capitalize tracking-tight leading-tight"
+        >
+          Encuentra Los Mejores Empresas de Internet En Venezuela
+        </h1>
+
+        <p class="text-center">
+          Busca opciones de internet en tu zona o ciudad, analizamos
+          por ti: servicios de internet en Venzuela, planes y precios de internet, costos de instalación,
+          cobertura, velocidad de conexión, atención al cliente.
+        </p>
+      </div>
+      <div class="grid grid-col max-w-md">
+        <BotonSimple
+          nombtnsimple="Encuentra internet en tu zona"
+          urlbtnsimple="/internet-en/"
+          targtebtnsimple=""
+        />
+      </div>
+    </div>
+  </section>
+
+  <Section>
+    <section>
+      <h2 class="text-center capitalize mt-6">
+       buscador de empresas de internet en venezuela
+      </h2>
+      <Buscador client:visible />
+    </section>
+    <section id="mejores" class="mt-4 p-4">
+      <h2 class="text-center capitalize mt-6">
+        las 7 mejores empresas de internet por fibra óptica en venezuela del 2024
+      </h2>
+     
+      <div class="flex flex-col md:flex-row justify-between">
+       
+        <div class="p-1 w-full md:w-[60%]">
+          <p>
+            Los mejores <span class="font-bold">empresas de internet del
+            año 2024, FIbex Telecom y Netcom lideraron la oferta</span> ofreciendo una variedad
+            de planes, precios y coberturas con alto rendimiento.  
+          </p>
+          <Lista
+            titulolista="Fibex Telecom"
+            listadescrip="Colíder del mercado con un rendimiento sobresaliente."
+          />
+          <Lista
+            titulolista="Netcom Plus"
+            listadescrip="Co-líder del mercado y dominio en velocidad de descarga y carga."
+          />
+          <Lista
+            titulolista="SuperCable"
+            listadescrip="Excelencia en Video streaming."
+          />
+          <Lista
+            titulolista="NetUno"
+            listadescrip="Excelencia en la navegación."
+          />
+          <Lista titulolista="Inter" listadescrip="Mejora Muy Sgnificativa." />
+          <Lista
+            titulolista="VNET"
+            listadescrip="Crecimiento Notable, Expansión Para 2025."
+          />
+          <Lista
+            titulolista="CANTV"
+            listadescrip="Empresa del estado venezolano en pleno proceso de expansión en 2024."
+          />
+          <BotonSimple
+            nombtnsimple="VER INFORME COMPLETO 2024"
+            urlbtnsimple="/guias-tutoriales/fibex-telecom-y-netcom-lideraron-servicios-en-2024"
+            targtebtnsimple=""
+          />
+        </div>
+        <div class="w-full md:w-[40%] flex justify-center items-center">
+          <img
+            src="/assets/img/ddh.jpg"
+            width="400"
+            alt="velocidad internet"
+            class="rounded-md"
+          />
+        </div>
+      </div>
+
+      <Cta3>
+        <div class="flex flex-col">
+          <h2 class="my-4">Recursos de Interés</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
+            <Card
+              href="/fibra-optica/#calculadora"
+              title="Caculadora de Velocidad"
+              body="Cuanta velocidad necesito"
+              rel=""
+              target=""
+            />
+            <Card
+              href="/router-wifi/"
+              title="Wifi5 vs Wifi6"
+              body="Aprende a diferenciarlos antes de comprar"
+              rel=""
+              target=""
+            />
+            <Card
+              href="/guias-tutoriales/como-ser-proveedor-de-internet-en-venezuela/"
+              title="Como Ser Proveedor de Internet"
+              body="Requisitos legales para ser proveedor en Venezuela"
+              rel=""
+              target=""
+            />
+            <Card
+              href="/fibra-optica/"
+              title="Como Medir La Velocidad de Internet"
+              body="Aprende que significan los datos que arrojan y que hacer con ellos"
+              rel=""
+              target=""
+            />
+          </div>
+        </div>
+      </Cta3>
+
+      <h2
+        id="elegircompañia"
+        class="text-center mt-6 border-b-8 border-amber-500 mb-2 capitalize"
+      >
+        ¿Cómo elegir la mejor opción de internet en tu zona?
+      </h2>
+      <div class="container flex flex-col md:flex-row">
+        <div class="flex justify-center items-center">
+          <img
+            src="/assets/img/dd.webp"
+            width="600"
+            alt="elegir compañia"
+            class="rounded-md"
+          />
+        </div>
+        <div class="p-1 md:px-10 max-w-2xl">
+          <p>
+            Antes de contratar un servicio de internet por fibra óptica, es
+            importante que <span class="font-bold"
+              >verifiques la disponibilidad en tu zona</span
+            > y consideres tus necesidades específicas. Investiga las opiniones de
+            otros usuarios y no dudes en contactar a las empresas de internet en
+            tu zona para obtener más información sobre sus planes y servicios. Recuerda
+            que una conexión rápida y estable puede hacer una gran diferencia en
+            tu experiencia diaria con internet.
+          </p>
+          <Lista
+            titulolista="Cobertura"
+            listadescrip="Asegúrate de que el compañia tenga cobertura de internet en tu zona, muchos compañiaes poseen cobertura a nivel nacional, otros solo en ciertas ciudades del pais."
+          />
+          <Lista
+            titulolista="Ancho de banda"
+            listadescrip="Elige un plan que ofrezca el ancho de banda que necesitas para tus actividades en línea, puedes empezar con un plan de 100 Mbps, siempre ilimitado pero debes tener un router wifi-5 ó wifi-6 que soporte ese ancho de banda."
+          />
+          <Lista
+            titulolista="Precio"
+            listadescrip="Compara los precios de los diferentes compañiaes de internet por fibra óptica cerca de tu zona y elige el que mejor se ajuste a tu presupuesto."
+          />
+          <Lista
+            titulolista="Servicios Adicionales"
+            listadescrip="Algunos compañiaes ofrecen servicios adicionales como televisión por cable, tv streaming o paquetes de servicios."
+          />
+          <Lista
+            titulolista="Atención al cliente"
+            listadescrip="Investiga la calidad de la atención al cliente del compañia, habla con conocidos que usen ese servicio pero no te dejes llevar por una sola opinión y menos si es negativa."
+          />
+        </div>
+      </div>
+      <section class="my-8">
+        <h2
+          class="text-center mt-6 border-b-8 border-amber-500 mb-2 capitalize"
+        >
+          Consulta Diferentes empresas de internet en tu ciudad
+        </h2>
+        <div class="grid md:grid-cols-3 gap-1 my-4">
+          <TopCiudades />
+        </div>
+      </section>
+      <Cta4
+        titulocta4="Kits de Instalación de Fibra Óptica"
+        urlbotoncta="kits-de-instalacion"
+        nomboton="Ver Guia de Compra"
+        descripcta="Si deseas conocer los kits de instalación que debe tener todo técnico instalador de internet por fibra óptica."
+      />
+      <div
+        class="justify-center items-center py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6"
+      >
+        <div class="mb-8 md:mb-10">
+          <h2 class="tracking-tight mb-4 text-center">Recursos de Ayuda</h2>
+          <p class="">
+            Antes de cambiarte de proveedor de internet (ISP) puedes usar estas
+            herramientas para asegurarte que tu empresa de internet actual no
+            sea el problema.
+          </p>
+        </div>
+        <div
+          class="space-y-8 md:grid md:grid-cols-3 gap-0 md:gap-1 md:space-y-0"
+        >
+          <Destacados
+            nom="¿Cómo saber cual es mi proveedor de internet?"
+            descrip="Para conocer cual es tu ISP solo deber ir a www.whatismyisp.com"
+            url="https://www.whatismyisp.com/"
+            target="_blank"
+          />
+          <Destacados
+            nom="Downdetector"
+            descrip="¿Sientes el internet lento? Monitorea tu red y averigua si es tu compañia de internet..."
+            url="https://downdetector.com/"
+            target="_blank"
+          />
+          <Destacados
+            nom="Websiteplanet"
+            descrip="A veces haces una busqueda y ves páginas caidas, con esta herramienta sabras si es tu compañia (ISP)..."
+            url="https://www.websiteplanet.com/webtools/down-or-not/"
+            target="_blank"
+          />
+          <Destacados
+            nom="Saber sobre un dominio"
+            descrip="Averigua quien es el dueño de un dominio y otros datos..."
+            url="http://itools.com/internet"
+            target="_blank"
+          />
+          <Destacados
+            nom="Urban VPN"
+            descrip="UrbanVPN, gratuito para navegador, navega seguro por la web."
+            url="https://www.urban-vpn.com/es/"
+            target="_blank"
+          />
+          <Destacados
+            nom="¿Cuál es mi Ip?"
+            descrip="Averigua cual es tu dirección ip y si concide con la que que te da tu compañia (ISP)..."
+            url="https://whatismyipaddress.com/"
+            target="_blank"
+          />
+        </div>
+      </div>
+      <div class="flex justify-center items-center mx-auto my-6">
+        <DonarPaypal />
+      </div>
+      <div
+        class="grid grid-col mx-auto border-b-2 border-slate-600 shadow-md bg-gradient-to-r from-slate-300 to-blue-300 rounded-md"
+      >
+        <div class="border-2 border-gray-600 bg-amber-100 p-4 rounded-md">
+          <h2 class="text-center mt-1">¿Qué significa ISP?</h2>
+          <p>
+            ¿Alguna vez te has preguntado quién te proporciona esa conexión que
+            te permite navegar por la web, enviar correos electrónicos, ver
+            videos y mucho más? La respuesta es simple: un <span
+              class="font-bold">ISP</span
+            >
+          </p>
+          <p>
+            <span class="font-bold">ISP</span> son las siglas en inglés de Internet
+            Service Provider. En español, se traduce como Proveedor de Servicios de
+            Internet. Un ISP es una empresa que ofrece el servicio de conexión a
+            Internet a sus clientes, tanto a particulares como a empresas.
+          </p>
+        </div>
+      </div>
+
+      <h2 class="text-center mt-6">
+        ¿Qué Hace un Proveedor de Internet (ISP)?
+      </h2>
+      <p class="">
+        La principal función de un ISP es conectar a sus usuarios a Internet.
+        Para ello, cuenta con una extensa red de infraestructura que incluye
+        cables de fibra óptica, servidores y equipos de telecomunicaciones. Los
+        ISP adquieren la conexión a Internet de mayoristas de Internet y luego
+        la revenden a sus clientes, proporcionando una amplia gama de servicios,
+        como:
+      </p>
+
+      <Lista
+        titulolista="Acceso a Internet"
+        listadescrip="Ya sea a través de conexiones de fibra óptica, cable coaxial, ADSL o conexiones móviles, los ISP ofrecen diferentes opciones para adaptarse a las necesidades de cada usuario."
+      />
+
+      <Lista
+        titulolista="Correo electrónico"
+        listadescrip="La mayoría de los ISP proporcionan cuentas de correo electrónico con un dominio propio."
+      />
+
+      <Lista
+        titulolista="Hosting"
+        listadescrip="Algunos ISP ofrecen servicios de alojamiento web para que los usuarios puedan crear sus propias páginas web."
+      />
+
+      <Lista
+        titulolista="Telefonía IP"
+        listadescrip="Muchos ISP también ofrecen servicios de telefonía a través de Internet (VoIP), lo que permite realizar llamadas a bajo costo.."
+      />
+      <Cta4
+        titulocta4="Guia de Routers Wifi 5 vs Wifi 6"
+        urlbotoncta="router-wifi"
+        nomboton="Ver Guia de Compra"
+        descripcta="Si necesitan comprar un router wifi-5 o wifi-6 que tenga puerto que soporte 1 Gigabit y que sea doble banda, aqui te damos algunas sugerencias."
+      />
+      <h2 class="text-center mt-6">
+        Tipos de empresas de Internet en Venezuela
+      </h2>
+      <p>
+        Existen diferentes tipos de servicios de internet (ISP), cada uno
+        especializado en un tipo de cliente o tecnología. Algunos de los más
+        comunes son:
+      </p>
+
+      <Lista
+        titulolista="empresas de servicios de internet de acceso"
+        listadescrip="Son los ISP tradicionales que ofrecen servicios de Internet a usuarios residenciales y pequeñas empresas."
+      />
+
+      <Lista
+        titulolista="empresas servicios de Internet de fibra óptica"
+        listadescrip="Se especializan en la provisión de servicios de Internet de alta velocidad utilizando la tecnología de fibra óptica."
+      />
+
+      <Lista
+        titulolista="empresas de servicios de Internet para empresas"
+        listadescrip="Ofrecen soluciones personalizadas para grandes empresas, incluyendo servicios de VPN, correo electrónico corporativo y conectividad en la nube."
+      />
+
+      <Lista
+        titulolista="empresas de servicios de telecomunicaciones"
+        listadescrip="Son empresas que ofrecen una amplia gama de servicios de telecomunicaciones, como telefonía fija, móvil, televisión por cable e Internet."
+      />
+
+      <h2 class="text-center mt-6 border-b-8 border-amber-500 mb-2">
+        ¿Cómo medir la velocidad de mi conexión a internet?
+      </h2>
+      <div class="grid grid-cols-2">
+        <Card
+          href="https://www.speedtest.net/es"
+          title="Speed Test"
+          body="De Ookla"
+          rel="noopener noreferrer"
+          target="_blank"
+        />
+        <Card
+          href="https://fiber.google.com/intl/es/speedtest/"
+          title="Google Fiber"
+          body="De Google"
+          rel="noopener noreferrer"
+          target="_blank"
+        />
+        <Card
+          href="https://fast.com/es/"
+          title="Fast"
+          body="De Netflix"
+          rel="noopener noreferrer"
+          target="_blank"
+        />
+        <Card
+          href="https://www.nperf.com/es/"
+          title="Nperf"
+          body="De Francia. ❤️"
+          rel="noopener noreferrer"
+          target="_blank"
+        />
+      </div>
+      <div
+        class="flex flex-col shadow-md justify-center items-center mx-auto p-1 md:p-4 bg-gradient-to-r bg-blue-100 to-slate-200 rounded-xl my-2"
+      >
+        <h3 class="text-center text-4xl md:text-4xl my-4">
+          Consulta Guias y Tutoriales
+        </h3>
+        <div
+          class="grid grid-cols md:grid-cols-3 gap-1 justify-center items-center mx-auto rounded-xl"
+        >
+          {
+            publicacionesAleatorias.length > 0 && (
+              <PostAleatorios {publicacionesAleatorias} />
+            )
+          }
+        </div>
+
+        <div class="flex flex-col my-3">
+          <BotonSimple
+            nombtnsimple="Blog Guias Tutoriales"
+            urlbtnsimple="/guias-tutoriales/"
+            targtebtnsimple=""
+          />
+        </div>
+      </div>
+      <Cta2 />
+    </section>
+  </Section>
+</Layout>

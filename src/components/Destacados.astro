@@ -1,0 +1,25 @@
+---
+import { Icon } from 'astro-icon/components'
+interface Props {
+  nom: string;
+  descrip: string;
+  url: string;
+  target: string;
+}
+
+const { nom, descrip, url, target } = Astro.props;
+---
+
+<div
+  class="border border-gray-400 shadow-md p-6 rounded-md cursor-pointer bg-no-repeat bg-[url('/assets/img/bg01.jpg')] bg-cover"
+>
+  <a href={url} target={target} class="text-gray-900 text-2xl">
+    <div
+      class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-amber-400 lg:h-12 lg:w-12"
+    >
+    <Icon name="iconamoon:component" />
+    </div>
+    <h3 class="mb-2 font-bold text-slate-900">{nom}</h3>
+    <p class="text-slate-600 text-lg text-justify">{descrip}</p>
+  </a>
+</div>

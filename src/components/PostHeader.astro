@@ -1,0 +1,33 @@
+---
+import { formatDate } from "../utils/fecha.formato";
+import Section from "./Section.astro";
+
+interface Props {
+  posttitle: string;
+  pubDate: string;
+  autor: string;
+}
+
+const { posttitle, pubDate, autor } = Astro.props;
+
+const formattedDate = formatDate(pubDate);
+---
+
+ <Section>
+  <section
+    class="bg-gray-900 bg-gradient-to-b to-transparent from-blue-900 rounded-xl"
+  >
+    <div class="flex flex-col items-center text-white">
+      <h1 class="post px-0 md:px-14 pb-4 pt-6 text-center text-white mb-2">
+        {posttitle}
+      </h1>
+      <div class="text-xl md:text-lg mb-2">
+        Autor: <span class="font-bold capitalize">{autor}</span>
+      </div>
+      <div class="text-2xl md:text-lg mb-2">
+        <span>{formattedDate}</span>
+      </div> 
+    </div>
+  </section>
+ 
+</Section>

@@ -1,0 +1,272 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/Section.astro";
+import TarjetaPrecio from "../../components/TarjetaPrecio.astro";
+import Cta from "../../components/Cta.astro";
+import DuoBoton from "../../components/DuoBoton.astro";
+import Valoracion from "../../components/Valoracion.astro";
+import Lista from "../../components/Lista.astro";
+import Cta4 from "../../components/Cta4.astro";
+import BotonSimple from "../../components/BotonSimple.astro";
+---
+
+<Layout
+  metatitle="➤〖Reseña Tecnoven | Proveedor de Internet en Venezuela"
+  metadescrip="Consulta zonas de cobertura, planes y precios Tecnoven, para todo Maracaibo, edo. Zulia y estados cercanos."
+  slug="proveedor/tecnoven/"
+>
+  <Section>
+    <h1 class="mt-10">Proveedor de Internet Tecnoven</h1>
+
+    <div class="grid grid-cols md:grid-cols-2 justify-center gap-2 my-10">
+      <div class="flex justify-center items-center mx-auto">
+        <img
+          class="rounded-t-lg p-4"
+          src="../../proveedores/tecnoven.png"
+          alt="Empresa Fibra Optica Tecnoven"
+        />
+      </div>
+      <div class="flex flex-col">
+        <h2 class="mt-2 text-center">Oficinas Comerciales Tecnoven</h2>
+        <p class="mb-2 text-justify">
+          Tiene su oficina comercial en el CC Los Lirios, Maracaibo. Con planes
+          de crecimiento en nuevas localidades y un objetivo de alcanzar más de
+          25,000 clientes a nivel nacional.
+        </p>
+        <div class="flex justify-center items-center">
+          <BotonSimple
+            nombtnsimple="Consulta Todas las Oficinas Tecnoven"
+            urlbtnsimple="https://tecnoveninternet.com/planes-tecnoven-internet-maracaibo/"
+            targtebtnsimple="_blank"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="grid grid-col md:grid-cols-2 justify-center items-center gap-2 p-4 bg-slate-50 border border-solid border-gray-500 rounded-md"
+    >
+      <div class="p-2">
+        <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+          Valoración General
+        </h2>
+        <Valoracion
+          valorgeneral="7.8"
+          valoracion="Muy buena opción en Maracaibo"
+          porcentajecobertura="70%"
+          puntoscobertura="7.3"
+          porcentajeatc="80%"
+          puntosatc="8.2"
+          porcentajeplanes="85%"
+          puntosplanes="8.5"
+          porcentajevelocidad="70%"
+          puntosvelocidad="7.3"
+        />
+        <DuoBoton nomproveedor="Tecnoven" slug="tecnoven" />
+      </div>
+      <div
+        class="p-3 border-t-2 md:border-t-0 sm:border-l-0 md:border-l-2 border-slate-400"
+      >
+        <h2 class="mt-2 text-center">Cobertura Tecnoven</h2>
+        <p class="text-justify">
+          La empresa tiene su sede en Maracaibo y opera activamente en varias
+          ciudades del estado Zulia, Cobertura Internet Tecnoven Cabimas,ha
+          ampliado su cobertura hacia ciudades de otros estados como Cobertura
+          Tecnoven Internet Maracay (Aragua), Cobertura Tecnoven Internet
+          Valencia (Carabobo), Cobertura Internet Tecnoven Guacara
+          (Carabobo),Cobertura Internet Tecnoven Punto Fijo ,Cobertura Internet
+          Tecnoven Mene,
+        </p>
+        <div class="flex justify-center items-center">
+          <BotonSimple
+            nombtnsimple="Consulta Zonas de Cobertura Tecnoven"
+            urlbtnsimple="https://tecnoveninternet.com/planes-tecnoven-internet-maracaibo/"
+            targtebtnsimple="_blank"
+          />
+        </div>
+      </div>
+    </div>
+    <Cta4
+      titulocta4="Guia de Routers"
+      urlbotoncta="router-wifi"
+      nomboton="Ver Guia"
+      descripcta="Si necesitan comprar un router wifi-5 o wifi-6 que tenga puerto que soporte 1 Gigabit y que sea doble banda, si no sabes cual, aqui te damos algunas sugerencias."
+    />
+    <div class="flex flex-col p-4">
+      <div id="servicios" class="flex flex-col">
+        <h2 class="font-bold text-center border-b-8 border-amber-500">
+          Tecnoven Internet Planes y Precios
+        </h2>
+        <p class="mt-4 text-justify">
+          Tecnoven ofrece distintos planes basados en la tecnología de fibra
+          óptica, lo que garantiza una conexión más rápida y estable en
+          comparación con otros servicios. <span class="font-bold"
+            >Entre sus principales planes destacan</span
+          >
+          Plan Hogar y Empresarial.
+        </p>
+        <p class="mt-4 text-justify">
+          Los detalles específicos de precios por ciudad están completamente disponibles en su
+          sitio web, los clientes pueden contactarlos directamente para obtener
+          cotizaciones personalizadas según sus necesidades.
+        </p>
+        <p class="mt-4 text-justify">
+          <span class="font-bold">Costo de Instalación:</span> Destacan por ofrecer
+          instalación gratuita en Maracibo y sus zonas cercanas que incluye 200 mts de cable y ONU, también soluciones
+          rápidas para la activación del servicio que varía dependiendo de la ubicación
+          del cliente y el tipo de plan elegido. En otras ciudades como Valencia
+          la instalación puede costar 100$. Tecnoven ha simplificado este proceso,
+          permitiendo que los usuarios gestionen sus servicios y pagos a través de
+          su oficina virtual​
+        </p>
+        <div class="flex flex-col justify-center items-center mx-auto my-4">
+          <div class="grid grid-cols-1 md:grid-cols-4 my-4">
+            <TarjetaPrecio
+              nombreplan="Plan Básico"
+              precio="20"
+              item1="100 Mbps"
+              item2="78 Canales de IPTV"
+              item3="Soporte 24/7"
+              item4="Servicio de Internet Continuo y Estable las 24h"
+              url1="https://tecnoveninternet.com/planes-tecnoven-internet-maracaibo/"
+            />
+            <TarjetaPrecio
+              nombreplan="Plan Ambar plus"
+              precio="25"
+              item1="400 Mbps"
+              item2="173 Canales de IPTV"
+              item3="Soporte 24/7"
+              item4="Servicio de Internet Continuo y Estable las 24h"
+              url1="https://tecnoveninternet.com/planes-tecnoven-internet-maracaibo/"
+            />
+            <TarjetaPrecio
+              nombreplan="Plan Agata Plus"
+              precio="30"
+              item1="600 Mbps"
+              item2="214 canales de IPTV"
+              item3="Soporte 24/7"
+              item4="Servicio de Internet Continuo y Estable las 24h"
+              url1="https://tecnoveninternet.com/planes-tecnoven-internet-maracaibo/"
+            />
+            <TarjetaPrecio
+              nombreplan="Plan Jade Plus"
+              precio="35"
+              item1="1000 Mbps"
+              item2="214 Canales de IPTV"
+              item3="Soporte 24/7"
+              item4="Servicio de Internet Continuo y Estable las 24h"
+              url1="https://tecnoveninternet.com/planes-tecnoven-internet-maracaibo/"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <Cta4
+      titulocta4="Busca Proveedor en tu ciudad"
+      urlbotoncta="internet-en"
+      nomboton="Accede al Buscador"
+      descripcta="Con solo colocar el nombre exacto de tu ciudad podrás saber cuales proveedores de internet estan cerca de tu zona"
+    />
+    <div id="pagos" class="my-10">
+      <h2 class="font-bold text-center border-b-8 border-amber-500">
+        Tecnoven Internet Métodos de Pagos
+      </h2>
+      <p class="mt-4 text-justify">
+        Tecnoven te ofrece diferentes medios de pago que estan disponibles en su
+        aplicación de pago pero entre estas estan:
+      </p>
+
+      <ol class="w-full space-y-1 list-decimal list-inside my-8">
+        <li>
+          <span class="font-semibold text-amber-500">Pago Móvil Tecnoven</span>
+        </li>
+        <li>
+          <span class="font-semibold text-amber-500"
+            >Transferencia bancarias</span
+          >.
+        </li>
+
+        <li>
+          <span class="font-semibold text-amber-500">Banca en linea</span>
+        </li>
+        <li>
+          <span class="font-semibold text-amber-500">Tecnoven Zelle</span>
+          para pagos en dolares.
+        </li>
+        <li>
+          <span class="font-semibold text-amber-500">Efectivo</span> En su sedes
+          comerciales para pagos en Bs y en dolares.
+        </li>
+      </ol>
+      <a
+        href="https://tecnoveninternet.com/como-registrar-un-pago-en-tecnoven/"
+        target="_blank"
+        class="text-white w-full bg-[#2557D6] justify-center hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none font-medium rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#2557D6]/50 me-2 mb-2"
+      >
+        <svg
+          aria-hidden="true"
+          class="w-10 h-3 me-2 -ms-1"
+          viewBox="0 0 256 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            d="M28.812 0L0 63.76H34.492L38.768 53.594H48.542L52.818 63.76H90.784V56.001L94.167 63.76H113.806L117.189 55.837V63.76H196.148L205.749 53.858L214.739 63.76L255.294 63.842L226.391 32.058L255.294 0H215.368L206.022 9.71899L197.315 0H111.418L104.042 16.457L96.493 0H62.073V7.495L58.244 0C58.244 0 28.812 0 28.812 0ZM35.486 9.05399H52.299L71.41 52.29V9.05399H89.828L104.589 40.054L118.193 9.05399H136.519V54.806H125.368L125.277 18.955L109.02 54.806H99.045L82.697 18.955V54.806H59.757L55.408 44.549H31.912L27.572 54.797H15.281C15.281 54.797 35.486 9.05399 35.486 9.05399ZM146.721 9.05399H192.063L205.931 24.034L220.246 9.05399H234.114L213.043 32.049L234.114 54.779H219.617L205.749 39.625L191.361 54.779H146.721V9.05399ZM43.665 16.795L35.924 35.067H51.397L43.665 16.795ZM157.918 18.527V26.879H182.654V36.188H157.918V45.306H185.663L198.555 31.876L186.21 18.519H157.918V18.527Z"
+            fill="white"></path></svg
+        >
+        Cómo Registrar Un Pago Tecnoven
+      </a>
+    </div>
+    <div id="ventajas" class="my-10">
+      <h2 class="font-bold text-center border-b-8 border-amber-500">
+        ¿Por qué elegir Tecnoven Internet?
+      </h2>
+      <p class="mt-4 text-justify">
+        Tecnoven Internet se presenta como una excelente opción para usuarios en
+        Maracaibo y otras regiones de Venezuela, especialmente para quienes
+        buscan un servicio confiable de fibra óptica con soporte técnico
+        integral. Sus esfuerzos por expandirse y mejorar continuamente sus
+        servicios hacen de Tecnoven una empresa a considerar en el competitivo
+        mercado de telecomunicaciones venezolano.
+      </p>
+      <Lista
+        titulolista="Cobertura"
+        listadescrip="Actualmente, Tecnoven está presente en: Maracaibo, San Francisco, Cabimas, Maracay, Valencia, Guacara, Punto Fijo y Mene."
+      />
+      <Lista
+        titulolista="Velocidad"
+        listadescrip="Tienes planes necesarios para navegar con holgura, gracias a su red de fibra óptica, Tecnoven ofrece conexiones más rápidas y estables, inicia con 100 Mbs."
+      />
+      <Lista
+        titulolista="Precio Tecnoven"
+        listadescrip="Inicia con 20$ para el plan básico."
+      />
+      <Lista
+        titulolista="Servicios Adicionales"
+        listadescrip="Tecnoven no solo ofrece internet, sino también servicios de hosting, IPTV, televisión por cable y servidores VPS"
+      />
+      <Lista
+        titulolista="Atención al cliente"
+        listadescrip="La empresa dispone de una oficina virtual donde los clientes pueden gestionar sus pagos, verificar el estado de su servicio y solicitar asistencia técnica en línea​ - (0261)-335-83-26"
+      />
+    </div>
+    <div id="cobertura" class="my-10">
+      <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+        Reseña Tecnoven Internet
+      </h2>
+      <p class="mb-2 text-justify">
+        Tecnoven Internet es una empresa venezolana de telecomunicaciones que
+        comenzó en Maracaibo, estado Zulia, en 2017. Surge con la misión de
+        ofrecer soluciones de conectividad en una región donde la demanda de
+        servicios de internet de calidad era creciente. En 2021, Tecnoven fue
+        habilitada oficialmente por CONATEL, lo que garantiza la legalidad y
+        calidad de sus servicios​
+      </p>
+      <Cta
+        titulocta="Contacto Tecnoven Internet"
+        descripcta="​(0261)-335-83-26 | 0500-TUFIBRA"
+        urlbotoncta="https://tecnoveninternet.com/"
+        urlbotoncta2="https://tecnoveninternet.com/estado-zulia/"
+        nomboton="Contacto"
+      />
+    </div>
+  </Section>
+</Layout>

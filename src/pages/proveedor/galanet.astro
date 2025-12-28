@@ -1,0 +1,258 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/Section.astro";
+import TarjetaPrecio from "../../components/TarjetaPrecio.astro";
+import Cta from "../../components/Cta.astro";
+import Cta4 from "../../components/Cta4.astro";
+import DuoBoton from "../../components/DuoBoton.astro";
+import Valoracion from "../../components/Valoracion.astro";
+import Lista from "../../components/Lista.astro";
+import BotonSimple from "../../components/BotonSimple.astro";
+---
+
+<Layout
+  metatitle="➤〖 Reseña Galanet〗| Proveedor de Internet en Venezuela"
+  metadescrip="Consulta zonas de cobertura, planes y precios Galanet, proveedor de servicios de acceso a internet y fibra óptica en Venezuela."
+  slug="proveedor/galanet/"
+>
+  <Section>
+    <h1 class="mt-10">Proveedor de Internet Galanet</h1>
+
+    <div class="grid grid-cols md:grid-cols-2 justify-center gap-2 my-10">
+      <div class="flex justify-center items-center mx-auto">
+        <img
+          class="rounded-t-lg p-4"
+          src="../../proveedores/gala.jpg"
+          alt="Empresa Fibra Optica Galanet"
+        />
+      </div>
+      <div class="flex flex-col">
+        <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+          Galanet Oficinas Comerciales
+        </h2>
+
+        <p class="mt-1 text-justify">
+          Galanet tiene oficinas comerciales en varias ciudades del país, entre
+          las que destacan: Oficina Galanet Caracas (Sede Principal), Oficina
+          Galanet San Antonio de los Altos, Oficina Galanet Maracay, Oficina
+          Galanet Valencia Carabobo, Oficina Galanet Barquisimeto, entre otras.
+        </p>
+        <div class="flex justify-center items-center">
+          <BotonSimple
+            nombtnsimple="Dirección Oficinas Comerciales"
+            urlbtnsimple="https://www.galanetsolution.com/oficinas"
+            targtebtnsimple="_blank"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="grid grid-col md:grid-cols-2 justify-center items-center gap-2 p-4 bg-slate-50 border border-solid border-gray-500 rounded-md"
+    >
+      <div class="p-2">
+        <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+          Valoración General
+        </h2>
+        <Valoracion
+          valorgeneral="8.4"
+          valoracion="Muy buena opción"
+          porcentajecobertura="80%"
+          puntoscobertura="8.6"
+          porcentajeatc="85%"
+          puntosatc="8.5"
+          porcentajeplanes="85%"
+          puntosplanes="8.5"
+          porcentajevelocidad="80%"
+          puntosvelocidad="8.0"
+        />
+        <DuoBoton nomproveedor="Galanet" slug="galanet" />
+      </div>
+      <div
+        class="p-3 border-t-2 md:border-t-0 sm:border-l-0 md:border-l-2 border-slate-400"
+      >
+        <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+          Galanet Zonas de Cobertura
+        </h2>
+        <p class="mt-4 text-justify">
+          Galanet tiene cobertura de fibra óptica en ciudades de Venezuela como:
+          Galanet cobertura Caracas, Galanet cobertura Margarita, Galanet
+          cobertura Calabozo, Galanet cobertura Valencia, Galanet cobertura La
+          Guaira, Galanet cobertura Cabimas, Galanet cobertura Trujillo, Galanet
+          cobertura Santa Barbara del Zulia, Galanet cobertura Tovar, Galanet
+          cobertura Cumaná, Galanet cobertura Timotes, Galanet cobertura
+          Barinas.
+        </p>
+
+        <div class="flex justify-center items-center">
+          <BotonSimple
+            nombtnsimple="Ver Zonas de Cobertura"
+            urlbtnsimple="https://www.galanetsolution.com/"
+            targtebtnsimple="_blank"
+          />
+        </div>
+      </div>
+    </div>
+    <Cta4
+      titulocta4="Guia de Routers"
+      urlbotoncta="router-wifi"
+      nomboton="Ver Guia"
+      descripcta="Si necesitan comprar un router wifi-5 o wifi-6 que tenga puerto que soporte 1 Gigabit y que sea doble banda, si no sabes cual, aqui te damos algunas sugerencias."
+    />
+    <div class="flex flex-col p-4">
+      <div id="servicios" class="flex flex-col">
+        <h2 class="font-bold text-center border-b-8 border-amber-500">
+          Galanet Planes y Precios
+        </h2>
+        <p class="mt-4 text-justify">
+          Si bien los precios pueden variar según la ubicación y la velocidad
+          seleccionada, Galanet ofrece planes que se ajustan tanto a usuarios
+          domésticos como corporativos. Para hogares, se pueden contratar
+          velocidades desde 4 Mbps, y para empresas, hasta 500 Mbps. La simetría
+          en la conexión para clientes empresariales es otro aspecto a destacar,
+          lo que significa que la velocidad de subida y bajada es la misma,
+          ideal para negocios que dependen de una transmisión de datos constante
+          y fluida.
+        </p>
+        <p class="mt-4 text-justify">
+          <span class="font-bold"
+            >Galanet ofrece 2 planes principales: personal y empresarial</span
+          >, además, con solo clickear unos cuantos botones tendrás acceso
+          inmediato a todos los servicios Galanet adicionales diseñados
+          especialmente para hacer del internet una experiencia única, los
+          precios los puedes <a
+            href="https://linktr.ee/galanet_solution"
+            target="_blank"
+          >
+            consultar aqui</a
+          > y dependiendo del estado en que residas te darán el mejor precio.
+        </p>
+        <div class="flex flex-col justify-center items-center mx-auto my-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 my-4">
+            <TarjetaPrecio
+              nombreplan="Personal"
+              precio="?"
+              item1="Desde 4 Mbps hasta 300Mbps"
+              item2="Consumo Ilimitado"
+              item3="Velocidad Garantizada"
+              item4="Atención personalizada"
+              url1="https://www.galanetsolution.com/plan-personal"
+            />
+            <TarjetaPrecio
+              nombreplan="Corporativo"
+              precio="?"
+              item1="Desde 4 Mbps hasta 500Mbps"
+              item2="100% Simetrico"
+              item3="Consumo Ilimitado"
+              item4="IP fija"
+              url1="https://www.galanetsolution.com/plan-empresa-full"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="pagos" class="my-10">
+      <h2 class="font-bold text-center border-b-8 border-amber-500">
+        Descubre los métodos de pagos Galanet
+      </h2>
+      <p class="mt-4 text-justify">
+        Galanet no da información concreta de los medios de pago en su web. A
+        través de su aplicación te resultará facil realizar tus pagos y
+        reportarlos sin necesidad de ir a pagar en alguna oficina comercial,
+        desde su web puedes reportar el pago en su <span
+          class="font-semibold text-amber-500"
+          ><a
+            href="https://oficina.saeplus.com/index.php?id_emp=Z2FsYW5ldF9zb2x1dGlvbg"
+            target="_blank">portal de pagos</a
+          ></span
+        >.
+      </p>
+
+      <ol class="w-full space-y-1 list-decimal list-inside my-8">
+        <li>
+          <span class="font-semibold text-amber-500">Pago Movil Galanet</span>
+          <span class="font-semibold text-blue-500"
+            >No Informa pero debe tener</span
+          >
+        </li>
+
+        <li>
+          <span class="font-semibold text-amber-500">Pagos en dolares</span>
+          <span class="font-semibold text-blue-500"
+            >No Informa pero debe poder hacerse</span
+          >
+        </li>
+      </ol>
+      <a
+        href="https://linktr.ee/galanet_solution"
+        target="_blank"
+        class="text-white w-full bg-[#2557D6] justify-center hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none font-medium rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#2557D6]/50 me-2 mb-2"
+      >
+        <svg
+          aria-hidden="true"
+          class="w-10 h-3 me-2 -ms-1"
+          viewBox="0 0 256 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            d="M28.812 0L0 63.76H34.492L38.768 53.594H48.542L52.818 63.76H90.784V56.001L94.167 63.76H113.806L117.189 55.837V63.76H196.148L205.749 53.858L214.739 63.76L255.294 63.842L226.391 32.058L255.294 0H215.368L206.022 9.71899L197.315 0H111.418L104.042 16.457L96.493 0H62.073V7.495L58.244 0C58.244 0 28.812 0 28.812 0ZM35.486 9.05399H52.299L71.41 52.29V9.05399H89.828L104.589 40.054L118.193 9.05399H136.519V54.806H125.368L125.277 18.955L109.02 54.806H99.045L82.697 18.955V54.806H59.757L55.408 44.549H31.912L27.572 54.797H15.281C15.281 54.797 35.486 9.05399 35.486 9.05399ZM146.721 9.05399H192.063L205.931 24.034L220.246 9.05399H234.114L213.043 32.049L234.114 54.779H219.617L205.749 39.625L191.361 54.779H146.721V9.05399ZM43.665 16.795L35.924 35.067H51.397L43.665 16.795ZM157.918 18.527V26.879H182.654V36.188H157.918V45.306H185.663L198.555 31.876L186.21 18.519H157.918V18.527Z"
+            fill="white"></path></svg
+        >
+        Whatsapp Para Consultar Precios Galanet
+      </a>
+    </div>
+    <Cta4
+      titulocta4="Busca Proveedor en tu ciudad"
+      urlbotoncta="internet-en"
+      nomboton="Accede al Buscador"
+      descripcta="Con solo colocar el nombre exacto de tu ciudad podrás saber cuales proveedores de internet estan cerca de tu zona"
+    />
+    <div id="ventajas" class="my-10">
+      <h2 class="font-bold text-center border-b-8 border-amber-500">
+        ¿Por qué elegir Galanet?
+      </h2>
+
+      <Lista
+        titulolista="Cobertura"
+        listadescrip="Tiene oficinas en casi toda Venezuela y cobertura de fibra óptica en: Carabobo, Bolivar, Lara, Distrito Capital, Miranda, La Guaira, Apure, Mérida, Guarico, Sucre."
+      />
+      <Lista
+        titulolista="Velocidad"
+        listadescrip="Garantizan que los usuarios podrán disfrutar de la totalidad de la velocidad contratada, sin restricciones ni limitaciones en el uso, puedes empezar con un plan Galanet de 4 Mbps, siempre ilimitado."
+      />
+      <Lista
+        titulolista="Precios Galanet"
+        listadescrip="Se debe consultar en su web a través del contacto de Whatsapp."
+      />
+      <Lista
+        titulolista="Servicios Adicionales"
+        listadescrip="Internet satelital."
+      />
+      <Lista
+        titulolista="Atención al cliente"
+        listadescrip="Su atención personalizada, un aspecto que mencionan como uno de sus puntos fuertes. Tienen un número de Whatsapp en que te atenderán dependiendo del estado donde vivas."
+      />
+    </div>
+    <div id="cobertura" class="my-1">
+      <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+        Reseña Galanet
+      </h2>
+      <p class="mt-4 text-justify">
+        Galanet, empresa orientada al segmento corporativo y residencial.
+        Galanet es una opción sólida para quienes buscan una conexión de
+        internet fiable en Venezuela, especialmente en áreas donde la
+        combinación de tecnología de fibra óptica e inalámbrica es fundamental.
+        Su atención al cliente, la estabilidad de su red y la garantía de
+        velocidad hacen que sea una opción atractiva tanto para hogares como
+        para empresas que buscan una conexión estable y rápida.
+      </p>
+      <Cta
+        titulocta="Contaco Galanet"
+        descripcta="0800-GALANET (0800-4252638)"
+        urlbotoncta="https://www.galanetsolution.com/"
+        urlbotoncta2="https://linktr.ee/galanet_solution"
+        nomboton="Galanet Preguntas Frecuentes"
+      />
+    </div>
+  </Section>
+</Layout>

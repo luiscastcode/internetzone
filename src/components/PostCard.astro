@@ -1,0 +1,51 @@
+---
+import { formatDate } from "../utils/fecha.formato";
+import { slugify } from "../utils/AppConfig";
+
+interface Props {
+  post: any;
+}
+
+const { post } = Astro.props;
+---
+
+<div
+  class="block max-w-xl p-4 bg-white border border-gray-400 rounded-lg shadow hover:bg-gray-100"
+>
+<a
+href=`/categoria/${slugify(post.frontmatter.categoria)}/`
+class="text-xs border border-gray-400 px-2 py-1 mt-2 bg-indigo-600 text-slate-200"
+>{post.frontmatter.categoria}</a
+>
+  <div class="flex justify-center items-center mx-auto">
+    {
+      post.frontmatter.image.src ? (
+        <img
+          src={post.frontmatter.image.src}
+          alt={post.frontmatter.image.src}
+          class="w-full"
+        />
+      ) : null
+    }
+  </div>
+  <h5 class="mb-2 text-2xl font-bold tracking-tight">
+    <a href={`${post.url}/`}> {post.frontmatter.posttitle}</a>
+  </h5>
+
+  <div class="flex justify-between text-center pb-1 text-xs">
+    <p>
+      Por: {post.frontmatter.autor} - {formatDate(post.frontmatter.pubDate)}
+    </p>
+  </div>
+  
+  <div class="text-gray-700">
+    <p class="line-clamp-6 pt-2">{post.frontmatter.excerpt}</p>
+  </div>
+  <div class="flex justify-between text-center">
+    <a
+      href={`${post.url}/`}
+      class="underline font-bold border border-gray-900 px-2 py-1 mt-2 bg-indigo-950 text-slate-200"
+      >leer más →</a
+    >
+  </div>
+</div>

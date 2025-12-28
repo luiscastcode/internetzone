@@ -1,0 +1,30 @@
+---
+const posts = [
+  { nomprov: "fibex", numero: "1" },
+  { nomprov: "netcom", numero: "2" },
+  { nomprov: "supercable", numero: "3" },
+  { nomprov: "netuno", numero: "4" },
+  { nomprov: "inter", numero: "5" },
+  { nomprov: "vnet", numero: "6" },
+   
+];
+---
+
+<div class="flex flex-col mb-4 bg-slate-100 rounded-md shadow-md p-4">
+  <h3 class="my-2">Top 6 Mejores del 2024</h3>
+  {
+    posts.map((post) => (
+      <div class="mb-2">
+        <a
+          href={`/proveedor/${post.nomprov}/`}
+          class="text-sm mb-1"
+        >
+           
+          <span class="capitalize ml-1 font-bold text-blue-400 hover:text-blue-600">
+            Proveedor de Internet {post.nomprov}
+          </span>
+        </a>
+      </div>
+    ))
+  }
+</div>

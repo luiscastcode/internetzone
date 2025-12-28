@@ -1,0 +1,367 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/Section.astro";
+import TarjetaPrecio from "../../components/TarjetaPrecio.astro";
+import Cta from "../../components/Cta.astro";
+import Cta4 from "../../components/Cta4.astro";
+import Valoracion from "../../components/Valoracion.astro";
+import DuoBoton from "../../components/DuoBoton.astro";
+import Lista from "../../components/Lista.astro";
+import Card from "../../components/Card.astro";
+import BotonSimple from "../../components/BotonSimple.astro";
+import Acordeon from "../../components/Acordeon.astro";
+---
+
+<Layout
+  metatitle="Fibex Telecom: Consulta Planes y Precios, Ofertas, Reseñas"
+  metadescrip="Fibex Telecom consulta zonas de cobertura, planes y precios, cómo instalar fibexplay en Roku Tv, cómo instalar fibexplay en smart tv, descarga la guia gratis"
+  slug="proveedor/fibex/"
+  structuredData={{}}
+>
+  <Section>
+    <section>
+      <div
+        class="container flex flex-col mx-auto px-2 md:px-40 justify-center items-center my-16"
+      >
+        <div class="max-w-3xl">
+          <h1
+            class="mb-4 text-center text-2xl capitalize tracking-tight leading-tight"
+          >
+            Fibex Telecom Proveedor de Internet: Consulta Planes y Precios,
+            Ofertas, Reseñas
+          </h1>
+        </div>
+        <div>
+          <img
+            class="rounded-t-lg p-4"
+            src="../../proveedores/fibex.jpg"
+            alt="Empresa Fibra Optica Fibex"
+          />
+        </div>
+      </div>
+    </section>
+    <section>
+      <div
+        class="grid grid-cols md:grid-cols-2 justify-center items-center gap-2 my-10 bg-slate-50 rounded-md shadow-md"
+      >
+        <div>
+          <a
+            href="https://clientes.fibextelecom.net?abonado=V30768"
+            target="_blank"
+          >
+            <img
+              class="rounded-t-lg p-4"
+              src="../../assets/img/pub/fibex.jpg"
+              alt="Empresa Fibra Optica Fibex"
+            />
+          </a>
+        </div>
+        <div class="flex flex-col">
+          <div class="p-2">
+            <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+              Valoración General
+            </h2>
+            <Valoracion
+              valorgeneral="8.0"
+              valoracion="Esta muy bien"
+              porcentajecobertura="80%"
+              puntoscobertura="8.3"
+              porcentajeatc="65%"
+              puntosatc="6.5"
+              porcentajeplanes="80%"
+              puntosplanes="8.0"
+              porcentajevelocidad="90%"
+              puntosvelocidad="9.3"
+            />
+            <DuoBoton nomproveedor="Fibex Telecom" slug="fibex" />
+          </div>
+          <div class="flex justify-center items-center">
+            <BotonSimple
+              nombtnsimple="Consulta Oficinas Comerciales"
+              urlbtnsimple="https://www.fibextelecom.net/"
+              targtebtnsimple="_blank"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="flex flex-col p-4">
+      <div id="servicios" class="flex flex-col">
+        <h2 class="font-bold text-center border-b-8 border-amber-500">
+          Fibex Planes y Precios
+        </h2>
+        <p class="mt-4 text-justify">
+          <span class="font-bold"
+            >Fibex Telecom ofrece una gama de planes competitivos</span
+          > y asequibles para diferentes necesidades de conectividad. Entre sus opciones
+          más populares se encuentran los planes de 200 Mbps, 400 Mbps y 600 Mbps,
+          con precios desde $30 mensuales. Todos estos planes incluyen velocidades
+          simétricas de descarga y subida, lo que garantiza una experiencia de navegación
+          rápida y eficiente, ideal tanto para el uso diario como para actividades
+          más intensivas como el streaming y los videojuegos.
+        </p>
+        <p class="mt-4 text-justify">
+          La <span class="font-bold"
+            >instalación cuesta 80$ e incluyen Router Wifi Básico, metros de
+            Fibra Óptica + ONT (Modem) y la primera mensualidad.</span
+          > Además, con solo clickear unos cuantos botones tendrás acceso inmediato
+          a todos los servicios adicionales diseñados especialmente para hacer del
+          internet una experiencia única, en todas las ciudades habrá un toldo con
+          asesores esperando por ti.
+        </p>
+        <p class="mt-4 text-justify">
+          Además, Fibex Telecom ofrece un plan corporativo que garantiza un
+          internet dedicado 100%, ideal para empresas que requieren conexiones
+          confiables y sin interrupciones. Este plan incluye soporte técnico
+          24/7 y una conexión punto a punto, asegurando la continuidad de las
+          operaciones comerciales.
+        </p>
+
+        <div class="flex flex-col justify-center items-center mx-auto my-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 my-4">
+            <TarjetaPrecio
+              nombreplan="Home"
+              precio="30"
+              item1="200 Mbps - 30$"
+              item2="400 Mbps - 35$"
+              item3="600 Mbps - 40$"
+              item4="Fibex Play Tv"
+              url1="https://www.fibextelecom.net/home-fibex"
+            />
+            <TarjetaPrecio
+              nombreplan="PYME"
+              precio="-"
+              item1="60 Mbps"
+              item2="150 Mbps"
+              item3="200 Mbps"
+              item4="Fibex Play Tv"
+              url1="https://www.fibextelecom.net/pyme"
+            />
+            <TarjetaPrecio
+              nombreplan="Empresa"
+              precio="-"
+              item1="Desde 10 Mbs hasta 1 GBps"
+              item2="Fibra Óptica interurbana"
+              item3="Fibra óptica propia"
+              item4="Preguntar por los precios"
+              url1="https://www.fibextelecom.net/empresa"
+            />
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <BotonSimple
+            nombtnsimple="Contrata el Servicio Fibex"
+            urlbtnsimple="https://clientes.fibextelecom.net?abonado=V30768"
+            targtebtnsimple="_blank"
+          />
+        </div>
+      </div>
+    </div>
+
+    <Cta4
+      titulocta4="Guia de Routers"
+      urlbotoncta="router-wifi"
+      nomboton="Ver Guia"
+      descripcta="Si necesitan comprar un router wifi-5 o wifi-6 que tenga puerto que soporte 1 Gigabit y que sea doble banda, si no sabes cual, aqui te damos algunas sugerencias."
+    />
+    <div id="pagos" class="my-10">
+      <h2 class="font-bold text-center border-b-8 border-amber-500">
+        Descubre los métodos de pagos Fibex Telecom
+      </h2>
+      <p class="mt-4 text-justify">
+        Fibex cuenta varios metodos de pagos, a tavés de su aplicación te
+        resultará facil realizar tus pagos y reportarlos sin necesidad de ir a
+        pagar en alguna oficina comercial, todo desde tu propio teléfono con la
+        app de Fibex pero también desde su web puedes reportar el pago en su <span
+          class="font-semibold text-amber-500"
+          ><a href="https://pagos2.fibextelecom.net/" target="_blank"
+            >portal de pagos</a
+          ></span
+        >.
+      </p>
+
+      <ol class="w-full space-y-1 list-decimal list-inside my-8">
+        <li>
+          <span class="font-semibold text-indigo-500">Pago Movil</span> desde <span
+            class="font-semibold text-indigo-500">cualquier banco</span
+          > puedes hacer tu pago.
+        </li>
+        <li>
+          <span class="font-semibold text-indigo-500"
+            >Transferencia bancarias</span
+          > a través del<span class="font-semibold text-indigo-500">
+            banco Mercantil</span
+          > para transferencias nacionales.
+        </li>
+        <li>
+          <span class="font-semibold text-indigo-500"
+            >Transferencias bancarias</span
+          > a través de <span class="font-semibold text-indigo-500"
+            >Banesco Panama</span
+          > para transferencia internacionales.
+        </li>
+        <li>
+          <span class="font-semibold textindigor-500">Fibex Zelle</span> para pagos
+          internacionales.
+        </li>
+      </ol>
+      <div class="flex justify-center items-center mx-0 my-4">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/iYyhZvQxRyI?si=1EHClpOVJ3nDpkuq&controls=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <h2 class="font-bold text-center border-b-8 border-amber-500">
+      Descargar Manuales de Configuraciones Fibex
+    </h2>
+    <p class="mt-4 text-justify">
+      ¿Buscas configurar tu nuevo router Wifi 6? No más problemas técnicos ni
+      dudas. Con la guía gratuita y completa que resuelve tus preguntas y
+      facilita el proceso en simples pasos. 📥 <span class="font-bold"
+        >Clic en los enlaces de abajo y descarga la guía de configuración gratis</span
+      >
+      y elimina cualquier complicación de tu camino. Aprovecha esta oportunidad para
+      obtener ayuda clara y gratuita.
+    </p>
+    <div
+      class="grid grid-col md:grid-cols-2 gap-1 justify-center items-center p-4 border-b-2 border-slate-600 shadow-md bg-gradient-to-r from-slate-300 to-blue-300 rounded-md"
+    >
+      <Card
+        href="https://manuales.fibextelecom.net/"
+        title="Descargar Guia de configuración Wifi 6"
+        body="Aprende como configurar tu nuevo router Wifi 6 Fibex, configura tu red wifi gratis"
+        rel=""
+        target="_blank"
+      />
+      <Card
+        href="https://manuales.fibextelecom.net/"
+        title="Descargar guias"
+        body="Todos los manuales de instalación de Fibex Telecom: cómo instalar fibexplay en Roku Tv, cómo instalar fibexplay en smart tv"
+        rel=""
+        target="_blank"
+      />
+    </div>
+    <Cta4
+      titulocta4="Busca Proveedor en tu ciudad"
+      urlbotoncta="internet-en"
+      nomboton="Accede al Buscador"
+      descripcta="Con solo colocar el nombre exacto de tu ciudad podrás saber cuales proveedores de internet estan cerca de tu zona"
+    />
+    <section>
+      <div id="ventajas" class="my-10">
+        <h2 class="font-bold text-center border-b-8 border-amber-500">
+          ¿Por qué elegir Fibex Telecom?
+        </h2>
+        <Lista
+          titulolista="Cobertura"
+          listadescrip="Tiene oficinas en casi toda Venezuela y cobertura de fibra óptica en: Carabobo, Bolivar, Lara, Distrito Capital, Miranda, Falcon, Apure, Monagas, Guarico, Sucre, Barinas."
+        />
+        <Lista
+          titulolista="Velocidad"
+          listadescrip="La empresa se enfoca en ofrecer un servicio de alta velocidad con baja latencia, ideal para aquellos que necesitan internet para trabajo remoto, videollamadas, o entretenimiento en línea como el streaming y los juegos, puedes empezar con un plan fibex de 200 Mbps, siempre ilimitado."
+        />
+        <Lista
+          titulolista="Precio Fibex"
+          listadescrip="Fibex ofrece una gama de planes basados en la tecnología de fibra óptica, permitiendo a los usuarios disfrutar de velocidades competitivas. Empieza con un servicio de internet ilimitado por $30/mes con instalación desde 80$ e incluyen la primera mensualidad y un Wifi basico."
+        />
+        <Lista
+          titulolista="Servicios Adicionales"
+          listadescrip="App de Tv streaming Fibex Tv PLay para clientes, Club Fibex con promociones exclusivas."
+        />
+        <Lista
+          titulolista="Atención al cliente"
+          listadescrip="Algunos clientes mencionan que el servicio de atención al cliente podría mejorar en cuanto a tiempos de respuesta y resolución de problemas técnicos. Un chatbot en su página te ayudara a resolver problemas básicos y hacer consultas."
+        />
+      </div>
+      <section>
+        <div
+          class="grid grid-col justify-center items-center gap-2 p-4 bg-slate-50 border border-solid border-gray-500 rounded-md"
+        >
+          <div class="p-3">
+            <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+              Fibex Zonas de Cobertura
+            </h2>
+            <p class="mt-4 text-justify">
+              Fibex Telecom cuenta con cobertura en casi todo el pais como:
+              Fibex cobertura Caracas, Fibex cobertura Valencia, Fibex cobertura
+              Maracay, Fibex cobertura Guacara, Fibex cobertura Los Teques,
+              Fibex cobertura Barinas, Fibex cobertura Cumana
+            </p>
+            <div class="flex justify-center items-center">
+              <BotonSimple
+                nombtnsimple="Consulta Todas las Zonas de Cobertura Fibex"
+                urlbtnsimple="https://www.fibextelecom.net/isp#faqComponent"
+                targtebtnsimple="_blank"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="ventajas" class="my-10">
+          <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+            Reseña Fibex Telecom
+          </h2>
+          <p class="mt-4 text-justify">
+            Fibex Telecom es una de las empresas especializadas en ofrecer
+            soluciones de internet de alta velocidad mediante fibra óptica y una
+            de las mas solidas de Venezuela, cuenta con cobertura en casi todo
+            el pais y ofrece gran variedad de precios planes, servicios y tv
+            streaming.
+          </p>
+          <p class="text-justify">
+            La empresa ha invertido en la expansión de su infraestructura de
+            fibra óptica, lo que le permite brindar un servicio estable y rápido
+            en zonas donde otros proveedores pueden tener limitaciones.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="text-center mb-2">Preguntas Frecuentes Sobre Fibex</h2>
+
+        <div id="accordion-collapse" data-accordion="collapse">
+          <Acordeon
+            id="1"
+            expandir="true"
+            pregunta="¿Cuántos megas tiene Fibex?"
+            respuesta="Antes 300 Mbps, ahora 500 Mbps. Antes 350 Mbps, ahora 550 Mbps"
+          />
+          <Acordeon
+            id="2"
+            expandir="false"
+            pregunta="¿Qué pasa si no pago Fibex?"
+            respuesta="Hasta ahora la empresa no tiene politicas de cortes inmediatas al vencer el mes y puedes abonar para seguir activo"
+          />
+          <Acordeon
+            id="3"
+            expandir="false"
+            pregunta="¿Cómo ver televisión con Fibex?"
+            respuesta="Descargando la aplicacion desde PlayStore y conectar tu android al t la tv o si tienes roku tambien puedes instalarlo alli."
+          />
+          <Acordeon
+            id="4"
+            expandir="false"
+            pregunta="¿Cómo puedo ver mi factura de Fibex?"
+            respuesta="Descarga la app 'Oficina Fibex' en Google Play y App Store. Inicia sesión y revisa tus facturas pendientes"
+          />
+        </div>
+      </section>
+    </section>
+    <section>
+      <Cta
+        titulocta="Contacto Fibex Telecom"
+        descripcta="Télefono: 0212 310 83 00"
+        urlbotoncta="https://www.fibextelecom.net"
+        urlbotoncta2="https://fibexplay.tv/"
+        nomboton="Información Fibex Play"
+      />
+    </section>
+  </Section>
+</Layout>

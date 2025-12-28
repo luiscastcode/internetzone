@@ -1,0 +1,304 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/Section.astro";
+import TarjetaPrecio from "../../components/TarjetaPrecio.astro";
+import Cta from "../../components/Cta.astro";
+import DuoBoton from "../../components/DuoBoton.astro";
+import Valoracion from "../../components/Valoracion.astro";
+import Lista from "../../components/Lista.astro";
+import Cta4 from "../../components/Cta4.astro";
+import BotonSimple from "../../components/BotonSimple.astro";
+---
+
+<Layout
+  metatitle="Airtek | Proveedor de Internet en Venezuela"
+  metadescrip="Consulta zonas de cobertura, planes y precios Airtek, empresa dedicada en proveer servicios de fibra óptica y TV con sede en Maracaibo."
+  slug="proveedor/airtek/"
+  structuredData={{}}
+>
+  <Section>
+    <section>
+      <div
+        class="container flex flex-col mx-auto px-2 md:px-40 justify-center items-center my-16"
+      >
+        <div class="max-w-3xl">
+          <h1
+            class="mb-4 text-center text-2xl capitalize tracking-tight leading-tight"
+          >
+            Airtek: Consulta Planes y Precios, Ofertas, Reseñas
+          </h1>
+        </div>
+        <div>
+          <img
+            class="rounded-t-lg p-4"
+            src="../../proveedores/airtek.jpg"
+            alt="Oz Telecom Empresa Fibra Optica"
+          />
+        </div>
+        <DuoBoton nomproveedor="Airtek" slug="airtek" />
+      </div>
+    </section>
+    <section>
+      <div
+        class="grid grid-cols md:grid-cols-2 justify-center items-center gap-2 my-10 bg-slate-50 rounded-md shadow-md"
+      >
+        <div>
+          <a href="" target="_blank">
+            <img
+              class="rounded-t-lg p-4"
+              src="../../assets/img/pub/promo_airtek.webp"
+              alt="Empresa Fibra Optica Fibex"
+            />
+          </a>
+        </div>
+        <div class="flex flex-col">
+          <div class="p-2">
+            <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+              Valoración General
+            </h2>
+            <Valoracion
+              valorgeneral="8.0"
+              valoracion="Esta muy bien"
+              porcentajecobertura="80%"
+              puntoscobertura="8.3"
+              porcentajeatc="65%"
+              puntosatc="6.5"
+              porcentajeplanes="80%"
+              puntosplanes="8.0"
+              porcentajevelocidad="90%"
+              puntosvelocidad="9.3"
+            />
+          </div>
+          <div class="flex justify-center items-center">
+            <BotonSimple
+              nombtnsimple="Consulta Todas las Oficinas Airtek"
+              urlbtnsimple="https://airtek.com.ve/n/sucursales/"
+              targtebtnsimple="_blank"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    >
+    <section>
+      <div class="flex flex-col p-4">
+        <div id="servicios" class="flex flex-col">
+          <h2 class="font-bold text-center border-b-8 border-slate-400">
+            Airtek Planes Y Precios
+          </h2>
+          <p  class="mb-2 ">
+            Consulta los precios competitivos de Airtek, puedes acceder a
+            ofertas especiales desde su sitio web. Además, con solo clickear
+            unos cuantos botones tendrás acceso inmediato a todos los servicios
+            adicionales diseñados especialmente para hacer del internet una
+            experiencia única.
+          </p>
+          <div class="flex flex-col justify-center items-center mx-auto my-4">
+            <div class="grid grid-cols-2 my-4">
+              <TarjetaPrecio
+                nombreplan="50 Megas"
+                precio="25"
+                item1="Para el hogar"
+                item2="Instalación gratis"
+                item3="Sin luz, sigue funcionando el internet"
+                item4="Servicio de Internet las 24h"
+                url1="https://airtek.com.ve/n/promo-instalacion-gratis/"
+              />
+              <TarjetaPrecio
+                nombreplan="600 Megas"
+                precio="35"
+                item1="Para hoagr y corporativos"
+                item2="Buena velocidad"
+                item3="Excelente para videollamadas"
+                item4="Jugar en Línea Múltiples Usuarios"
+                url1="https://airtek.com.ve/n/promo-instalacion-gratis/"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <Cta4
+      titulocta4="Guia de Routers"
+      urlbotoncta="router-wifi"
+      nomboton="Ver Guia"
+      descripcta="Si necesitan comprar un router wifi-5 o wifi-6 que tenga puerto que soporte 1 Gigabit y que sea doble banda, si no sabes cual, aqui te damos algunas sugerencias."
+    />
+    <section>
+      <div id="pagos" class="my-2">
+        <h2 class="font-bold text-center border-b-8 border-slate-400">
+          Todos los métodos de pagos Airtek
+        </h2>
+        <p  class="mb-2 ">
+          Airtek te ofrece diferentes medios de pagos online<span
+            class="font-semibold text-indigo-500"
+          >
+            sin moverte de casa</span
+          >a través de su aplicación te resultará facil realizar tus pagos y
+          reportarlos sin necesidad de ir a pagar en alguna oficina comercial,
+          todo desde tu propio teléfono con la app de Airtek y también desde su
+          web puedes reportar el pago en su <span
+            class="font-semibold text-indigo-500">portal de pagos</span
+          >.
+        </p>
+
+        <ol class="w-full list-decimal list-inside my-2">
+          <li>
+            <span class="font-semibold text-indigo-500">Airtek Pago Móvil</span>
+            desde cualquier banco con tu numero de telefono.
+          </li>
+          <li>
+            <span class="font-semibold text-indigo-500"
+              >Transferencia bancarias</span
+            > a través del BNC.
+          </li>
+
+          <li>
+            <span class="font-semibold text-indigo-500">Banca en linea</span> a través
+            de la aplicación de tu banco para transferencias.
+          </li>
+          <li>
+            <span class="font-semibold text-indigo-500">Airtek Zelle</span>
+            para pagos en dolares, en su web estan los datos y correo del Zelle.
+          </li>
+          <li>
+            <span class="font-semibold text-indigo-500">Efectivo</span> En su sedes
+            comerciales para pagos en Bs y en dolares.
+          </li>
+          <li>
+            <span class="font-semibold text-amber-500">Reporte de pagos</span>
+            <span class="font-semibold text-blue-500"
+              ><a
+                href="https://airtek.com.ve/portal-de-pagos.html"
+                target="_blank"
+              >
+                Aqui reportas tu pago
+              </a>
+            </span>
+
+            <a
+              href="https://airtek.com.ve/n/"
+              target="_blank"
+              class="text-white w-full bg-[#2557D6] justify-center hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none font-medium rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#2557D6]/50 me-2 mb-2"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-10 h-3 me-2 -ms-1"
+                viewBox="0 0 256 64"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                ><path
+                  d="M28.812 0L0 63.76H34.492L38.768 53.594H48.542L52.818 63.76H90.784V56.001L94.167 63.76H113.806L117.189 55.837V63.76H196.148L205.749 53.858L214.739 63.76L255.294 63.842L226.391 32.058L255.294 0H215.368L206.022 9.71899L197.315 0H111.418L104.042 16.457L96.493 0H62.073V7.495L58.244 0C58.244 0 28.812 0 28.812 0ZM35.486 9.05399H52.299L71.41 52.29V9.05399H89.828L104.589 40.054L118.193 9.05399H136.519V54.806H125.368L125.277 18.955L109.02 54.806H99.045L82.697 18.955V54.806H59.757L55.408 44.549H31.912L27.572 54.797H15.281C15.281 54.797 35.486 9.05399 35.486 9.05399ZM146.721 9.05399H192.063L205.931 24.034L220.246 9.05399H234.114L213.043 32.049L234.114 54.779H219.617L205.749 39.625L191.361 54.779H146.721V9.05399ZM43.665 16.795L35.924 35.067H51.397L43.665 16.795ZM157.918 18.527V26.879H182.654V36.188H157.918V45.306H185.663L198.555 31.876L186.21 18.519H157.918V18.527Z"
+                  fill="white"></path></svg
+              >
+              Rcursos de Ayuda Airtek
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <Cta4
+      titulocta4="Busca Proveedor en tu ciudad"
+      urlbotoncta="internet-en"
+      nomboton="Accede al Buscador"
+      descripcta="Con solo colocar el nombre exacto de tu ciudad podrás saber cuales proveedores de internet estan cerca de tu zona"
+    />
+    <section>
+      <div id="ventajas" class="my-10">
+        <h2 class="font-bold text-center border-b-8 border-slate-400 my-4">
+          ¿Por qué elegir Airtek?
+        </h2>
+        <p  class="mb-2 ">
+          Entre las razones para contratar los servicios de Airtek se encuentran
+          su velocidad competitiva, la fiabilidad del servicio y su uso de
+          tecnología innovadora. La red de fibra óptica de la empresa es
+          especialmente atractiva para aquellos que requieren internet de alta
+          velocidad y estable para actividades como el teletrabajo, la educación
+          en línea o el entretenimiento digital. Además, la presencia sólida de
+          Airtek en Zulia y su enfoque regional aseguran un servicio de atención
+          al cliente personalizado y ajustado a las necesidades de los usuarios
+          locales.
+        </p>
+        <Lista
+          titulolista="Cobertura"
+          listadescrip="Presencia sólida de Airtek en el Zulia y Falcon, lideres en Maracaibo y Coro."
+        />
+        <Lista
+          titulolista="Velocidad"
+          listadescrip="Tienes planes necesarios para navegar con holgura, puedes empezar con un plan de 100 Mbps, siempre ilimitado."
+        />
+        <Lista
+          titulolista="Precio Airtek"
+          listadescrip="Empieza con Internet ilimitado de Ultravelocidad por Bs.S 914,75 o $25/mes con Instalación GRATIS."
+        />
+        <Lista
+          titulolista="Servicios Adicionales"
+          listadescrip="App de Tv streaming paquetes de servicios sin costo adicional para clientes."
+        />
+        <Lista
+          titulolista="Atención al cliente"
+          listadescrip="Su enfoque regional aseguran un servicio de atención al cliente personalizado y ajustado a las necesidades de los usuarios locales."
+        />
+      </div>
+    </section>
+    <section>
+      <div
+        class="grid grid-col justify-center items-center gap-2 p-4 bg-slate-50 border border-solid border-gray-500 rounded-md"
+      >
+        <div
+          class="p-3 "
+        >
+          <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+            Airtek Zonas de Cobertura
+          </h2>
+          <p class="mb-2 ">
+            Airtek tiene su base de operaciones en Maracaibo, su cobertura se
+            limita a Maracaibo y Coro con zonas de cobertura extendidas,
+            garantizan que la señal llegue hasta los lugares más remotos y así
+            brindarte el servicio ininterrumpido que necesitas, consulta todas
+            sus zonas de cobertura.
+          </p>
+          <div class="flex justify-center items-center">
+            <BotonSimple
+              nombtnsimple="Consulta Zonas de Cobertura Airtek"
+              urlbtnsimple="https://airtek.com.ve/cobertura.html"
+              targtebtnsimple="_blank"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div id="ventajas" class="my-10">
+        <h2 class="font-bold text-center border-b-8 border-slate-400 mb-4">
+          Reseña Airtek
+        </h2>
+        <p class="mb-2 ">
+          Airtek es un proveedor de servicios de internet que opera en las
+          ciudades venezolanas de Maracaibo y Coro. Fundada en 2008 en el estado
+          Zulia, la empresa ha logrado posicionarse como un actor clave en el
+          mercado de las telecomunicaciones locales.
+        </p>
+        <p >
+          Líder en Zulia y Falcón, uno de los principales atractivos de Airtek
+          es su capacidad para ofrecer velocidades de internet que superan los
+          promedios de países como Estados Unidos y Tailandia, algo que resulta
+          excepcional en el contexto venezolano, donde la infraestructura de
+          telecomunicaciones ha tenido dificultades para mantenerse a la par con
+          los estándares globales. El crecimiento de la empresa también se vio
+          impulsado por fusiones con otras compañías locales, como Multivisión y
+          Corporación Matrix, lo que le permitió expandir su cobertura y mejorar
+          su oferta de servicios en Maracaibo y Coro.
+        </p>
+      </div>
+    </section>
+    <Cta
+      titulocta="Contacto Airtek"
+      descripcta="Whatsapp: +58 424 6706389"
+      urlbotoncta="https://airtek.com.ve/n/"
+      urlbotoncta2="https://www.netuno.net.ve/nu_site/contactanos/"
+      nomboton="Ponte en Contacto"
+    />
+  </Section>
+</Layout>

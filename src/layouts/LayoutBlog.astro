@@ -1,0 +1,60 @@
+---
+import Layout from "./Layout.astro";
+import PostHeader from "../components/PostHeader.astro";
+import PostContent from "../components/PostContent.astro";
+import ListaProv from "../components/ListaProv.astro";
+import { formatearBlogPost } from "../utils/AppConfig";
+import PostRelacionados from "../components/PostRelacionados.astro";
+import BannerCotosen from "../components/BannerCotosen.astro";
+ 
+
+const { frontmatter,  headings } = Astro.props;
+
+const allPosts = await Astro.glob("../pages/guias-tutoriales/*.md");
+const postFormateado = formatearBlogPost(allPosts );
+
+const publicacionesRelacionadas = postFormateado
+  .filter(
+    (post: any) =>
+      post.frontmatter.categoria.toLowerCase() === frontmatter.categoria.toLowerCase() &&
+      post.frontmatter.posttitle.toLowerCase() !== frontmatter.posttitle.toLowerCase()
+  )
+  .slice(0, 3);
+---
+
+<Layout
+  metatitle={frontmatter.metatitle}
+  metadescrip={frontmatter.description}
+  slug={frontmatter.slug}
+  structuredData={{}}
+>
+  <div class="container flex flex-col md:flex-row justify-center">
+    <section id="contenido" class="w-full md:w-[80%]">
+      <PostHeader
+        posttitle={frontmatter.posttitle}
+        pubDate={frontmatter.pubDate}
+        autor={frontmatter.autor}
+      />
+            
+      <PostContent
+      headings={headings}
+        img={{ src: frontmatter.image.src, alt: frontmatter.image.alt }}
+        ><slot /></PostContent
+      >
+    </section>
+     
+    <aside class="w-full md:w-[20%] p-2 shadow-md rounded-md">  
+      <div class="h-auto sticky top-0" > 
+      <ListaProv />     
+      {publicacionesRelacionadas.length > 0 &&(         
+          <h3 class="text-gray-600">Publicaciones Relacionadas</h3>
+          <PostRelacionados {publicacionesRelacionadas} />       
+        )
+        } 
+        <BannerCotosen/>
+        </div>  
+    </aside>
+  
+  </div>
+  
+</Layout>

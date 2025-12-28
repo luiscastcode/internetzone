@@ -1,0 +1,29 @@
+---
+import BotonSimple from "./BotonSimple.astro";
+
+interface Props {
+  nombre: string;
+  url: string;
+  img: string;
+  descripherr: string;
+}
+
+const { nombre, url, img, descripherr } = Astro.props;
+---
+
+<div class="flex flex-col gap-1 m-1 p-4 rounded-md border border-slate-400 bg-gray-50">
+  <a href={url} target="_blank" rel="nofollow">
+    <div class="my-2">
+      <img width="390" height="250" alt={nombre} src={`../../assets/img/herramientas/${img}`} />
+    </div>
+    <div>
+      <h4 class="capitalize text-2xl hover:text-blue-500">{nombre}</h4>
+      <p>{descripherr}</p>
+      <BotonSimple
+        nombtnsimple="Ver En Amazon"
+        urlbtnsimple={url}
+        targtebtnsimple="_blank"
+      />
+    </div>
+  </a>
+</div>

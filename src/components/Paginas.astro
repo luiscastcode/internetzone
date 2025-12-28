@@ -1,0 +1,29 @@
+---
+import Link from './Link.astro'
+
+const {prevUrl, nextUrl} = Astro.props;
+---
+<nav aria-label="Blog Pages">
+{
+  prevUrl && (
+    <Link 
+    text="Anterior"
+    href={prevUrl}
+    rel="canonical"
+    target=''
+     
+    />
+  )
+}
+{
+  nextUrl && (
+    <Link 
+    text="Próximo"
+    href={nextUrl}
+    rel="canonical"
+    target=''
+     
+    />
+  )
+}
+</nav>

@@ -1,0 +1,19 @@
+---
+interface Props {
+  nombtnsimple: string;
+  urlbtnsimple: string;
+  targtebtnsimple: string;
+}
+
+const { nombtnsimple, urlbtnsimple, targtebtnsimple } = Astro.props;
+---
+
+<div class="flex flex-col my-3 justify-center items-center mx-auto">
+  <a
+    href={urlbtnsimple}
+    target={targtebtnsimple}
+    class="text-slate-100 bg-gradient-to-r from-[#F7BE38] to-[#bd9c51] hover:bg-[#F7BE38]/90 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-800 font-bold text-xl px-8 py-4 text-center me-2 mt-2"
+  >
+    {nombtnsimple}
+  </a>
+</div>

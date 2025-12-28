@@ -1,0 +1,87 @@
+---
+import BotonSimple from "./BotonSimple.astro";
+import CiudadLista from "./CiudadLista.astro";
+import ListaProv from "./ListaProv.astro";
+
+interface Props {
+  titulocta: string;
+  descripcta: string;
+  urlbotoncta: string;
+  urlbotoncta2: string;
+  nomboton: string;
+}
+
+const { titulocta, descripcta, urlbotoncta, urlbotoncta2, nomboton } =
+  Astro.props;
+---
+
+<div class="w-full px-1 md:px-4 sm:p-8">
+  <h5 class="mb-2 text-3xl text-center font-bold text-blue-900">
+    {titulocta}
+  </h5>
+  <p class="mb-5 text-base text-justify text-gray-900 sm:text-lg">
+    {descripcta}
+  </p>
+  <div
+    class="items-center justify-center mx-auto space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse"
+  >
+    <a
+      href={urlbotoncta}
+      target="_blank"
+      class="text-gray-900 w-full md:w-[50%] bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-bold rounded-lg text-lg px-5 py-2.5 justify-center inline-flex items-center dark:focus:ring-[#F7BE38]/50 me-2 mb-2"
+    >
+      <svg
+        class="w-6 h-6 text-gray-800 mr-3"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778"
+        ></path>
+      </svg>
+
+      Visitar Web
+    </a>
+    <a
+      href={urlbotoncta2}
+      target="_blank"
+      class="text-white w-full md:w-[50%] bg-[#2557D6] hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none font-bold rounded-lg text-lg px-5 py-2.5 justify-center inline-flex items-center dark:focus:ring-[#2557D6]/50 me-2 mb-2"
+    >
+      <svg
+        class="w-6 h-6 text-white mr-3"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
+          clip-rule="evenodd"></path>
+      </svg>
+
+      {nomboton}
+    </a>
+  </div>
+  <div
+    class="grid grid-col md:grid-cols-2 mt-2 border-b-2 border-slate-600 shadow-md bg-gradient-to-r from-slate-300 to-blue-300 rounded-md p-8"
+  >
+     
+    <div class="flex justify-center items-center mx-auto my-1">
+      <CiudadLista />
+    </div>
+    <div class="flex justify-center items-center mx-auto my-1">
+      <ListaProv />
+    </div>
+  </div>
+</div>

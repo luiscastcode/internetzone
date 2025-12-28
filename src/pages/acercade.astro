@@ -1,0 +1,151 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
+import Heading from "../components/Heading.astro";
+import Cta2 from "../components/Cta2.astro";
+import Lista from "../components/Lista.astro";
+import Cta4 from "../components/Cta4.astro";
+---
+
+<Layout
+  metatitle="Acerca del proyecto"
+  metadescrip="Mejor Fibra Óptica es un directorio que te ayudará a comparar proveedores de internet en Venezuela al momento de elegir tu servicio de fibra óptica."
+  slug="acercade/"
+>
+ 
+  <Section>
+    <Heading
+    tituloencabezado="Acerca de Mejor Fibra Óptica"
+    subtitulo="Conectando a Venezuela con la Mejor Información sobre Fibra Óptica."
+  />
+    <div
+      class="flex flex-col bg-white p-2 hover:bg-gray-100 rounded-lg shadow"
+    >
+      <div class="flex flex-col md:flex-row p-8">
+        <img
+          src="/assets/img/dd.webp"
+          class="w-full rounded-md"
+          alt="mejor fibra optica"
+        />
+        <div class="flex flex-col p-4 leading-normal">
+          <h2 class="text-center mt-6 border-b-8 border-amber-500 mb-2">
+            Una Visión que Nació de la Necesidad
+          </h2>
+          <p class="text-justify mb-2">
+            Hola soy Luis (lcastcode) y soy el creador de este proyecto. La idea
+            surgió de una frustración compartida por muchos: encontrar un
+            servicio de internet confiable, accesible y adaptado a las
+            necesidades de cada usuario. En un país donde la conectividad es
+            cada vez más importante, noté que muchas personas enfrentaban
+            problemas para identificar las opciones disponibles en su zona,
+            entender los planes ofrecidos o incluso comparar precios y
+            servicios.
+          </p>
+          <p class="text-justify mb-2">
+            Quise cambiar eso. Este sitio no solo busca informar, sino también
+            empoderar a los usuarios con conocimiento para que puedan exigir
+            mejores ofertas, comparar opciones y, en última instancia, ayudar a
+            que el mercado mejore para todos.
+          </p>
+          <p class="text-justify mb-2">
+            También la página te guiará con aspectos técnicos a la hora de
+            adquirir el servicio o comprar un router wifi así como también el
+            saber configurarlo.
+          </p>
+          <h2 class="text-center mt-6 border-b-8 mb-2">
+            ¿Qué Puedes Encontrar en Nuestra Web?
+          </h2>
+          <p class="text-justify mb-2">
+            En nuestra plataforma, encontrarás información detallada y
+            actualizada sobre:
+          </p>
+          <Lista
+            titulolista="Empresas de Fibra Óptica en Venezuela:"
+            listadescrip="Te mostramos quiénes operan en el país, cuáles son sus áreas de cobertura y qué planes ofrecen."
+          />
+          <Lista
+            titulolista="Comparación de Precios y Servicios:"
+            listadescrip="Analizamos las distintas opciones para que puedas tomar una decisión informada."
+          />
+          <Lista
+            titulolista="Métodos de Pago y Promociones:"
+            listadescrip="Información sobre las formas de pago aceptadas y ofertas especiales que puedan interesarte."
+          />
+          <Lista
+            titulolista="Cobertura por Zona:"
+            listadescrip="Descubre si las empresas disponibles llegan a tu localidad, lo que facilita encontrar la mejor alternativa para tu hogar o negocio."
+          />
+        </div>
+      </div>
+      <Cta4
+        titulocta4="Guia de compra wifi-6 2025"
+        urlbotoncta="guias-tutoriales/9-mejores-routers-wifi6-para-comprar-2024"
+        descripcta="Los mejores routers wifi-6, los mejores para 2025"
+        nomboton="Ver Guia de Compra"
+      />
+      <div class="flex flex-col md:flex-row p-8">
+        <div class="flex flex-col p-4 leading-normal">
+          <h2 class="text-center mt-6 border-b-8 border-amber-500 mb-2">
+            Más que Información: Una Guía Práctica
+          </h2>
+          <p class="text-justify mb-2">
+            Además de ayudarte a conocer las opciones disponibles, este sitio
+            está diseñado para guiarte en aspectos técnicos clave. Nuestro
+            objetivo es que no solo encuentres el servicio adecuado, sino que
+            también aprendas a sacarle el máximo provecho.
+          </p>
+          <p class="text-justify mb-2">Entre los temas que abordamos:</p>
+          <Lista
+            titulolista="Cómo Elegir el Mejor Servicio de Internet:"
+            listadescrip="¿Qué factores debes considerar al elegir un proveedor? ¿Qué velocidad necesitas realmente? Te ayudamos a responder estas preguntas y más."
+          />
+          <Lista
+            titulolista="Guía para Comprar el Router Wifi Ideal:"
+            listadescrip="No todos los routers son iguales. Aprende a identificar el equipo que mejor se adapte a tus necesidades y cómo configurarlo correctamente."
+          />
+          <Lista
+            titulolista="Configuración y Optimización de Redes Domésticas:"
+            listadescrip="Pasos sencillos para configurar tu red y mejorar la señal en cada rincón de tu casa."
+          />
+        </div>
+        <img
+          src="/assets/img/rr.webp"
+          class="w-full rounded-md"
+          alt="logo mejor fibra optica"
+        />
+      </div>
+      <div class="flex flex-col p-4 leading-normal">
+        <h2 class="text-center mt-6 border-b-8 border-amber-500 mb-2">
+          Un Espacio para la Comunidad
+        </h2>
+        <p class="text-justify mb-2">
+          Este sitio también es un lugar para compartir experiencias. Creemos
+          que la opinión de los usuarios es crucial para pintar un panorama
+          completo del mercado. Por eso, te invitamos a dejar tus comentarios,
+          sugerencias y opiniones sobre los servicios que has probado.
+        </p>
+        <p class="text-justify mb-2">
+          Tu experiencia puede ayudar a otros a tomar decisiones informadas y,
+          al mismo tiempo, generar una presión positiva sobre las empresas para
+          que mejoren su oferta y reduzcan los precios.
+        </p>
+        <h2 class="text-center mt-6 border-b-8 border-amber-500 mb-2">
+          Nuestra Misión: Conexión Accesible y de Calidad para Todos
+        </h2>
+        <p class="text-justify mb-2">
+          Venezuela tiene un potencial inmenso, y una conectividad eficiente es
+          clave para desbloquear nuevas oportunidades en educación, trabajo,
+          negocios y entretenimiento. Al proporcionar esta información y
+          herramientas, nuestra misión es contribuir a un mercado más
+          competitivo, donde los usuarios tengan el poder de elegir lo mejor
+          para ellos y sus familias.
+        </p>
+        <p class="text-justify mb-2">
+          ¡Gracias por ser parte de esta comunidad! Juntos, podemos marcar la
+          diferencia en el panorama de las telecomunicaciones en Venezuela.
+        </p>
+      </div>
+    </div>
+    <Cta2 />
+  </Section>
+</Layout>

@@ -1,0 +1,294 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/Section.astro";
+import PorCiudad from "../../components/PorCiudad";
+import ListaProv from "../../components/ListaProv.astro";
+import Cta2 from "../../components/Cta2.astro";
+import Card from "../../components/Card.astro";
+import BotonSimple from "../../components/BotonSimple.astro";
+import Acordeon from "../../components/Acordeon.astro";
+import CiudadLista from "../../components/CiudadLista.astro";
+import Lista from "../../components/Lista.astro";
+import BannerCotosen from "../../components/BannerCotosen.astro";
+import { cities } from "../../data/cities";
+import { companies } from "../../data/companies";
+
+export async function getStaticPaths() {
+  return cities.map((city) => ({
+    params: { city: city.slug },
+    props: { cityData: city },
+  }));
+}
+
+const { cityData } = Astro.props;
+const providersInCity = companies.filter((company) =>
+  company.ciudades.some(
+    (ciudad) => ciudad.ciudad.toLowerCase() === cityData.name.toLowerCase(),
+  ),
+);
+---
+
+<Layout
+  metatitle={cityData.metaTitle}
+  metadescrip={cityData.metaDescription}
+  slug={`internet-en/${cityData.slug}/`}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `https://mejorfibraoptica.site/internet-en/${cityData.slug}/`,
+    url: `https://mejorfibraoptica.site/internet-en/${cityData.slug}/`,
+    name: cityData.metaTitle,
+    description: cityData.metaDescription,
+    isPartOf: {
+      "@type": "WebSite",
+      url: "https://mejorfibraoptica.site/",
+      name: "Mejor Fibra Óptica",
+      description:
+        "Compara proveedores de fibra óptica en tu área o ciudad, proveedores en Caracas, proveedores en Valencia, proveedores en Barquisimeto, muchas más ciudades y proveedores.",
+    },
+    inLanguage: "es-ES",
+  }}
+>
+  <section
+    class="shadow-md bg-no-repeat bg-[url('/assets/img/city1.jpg')] bg-cover"
+  >
+    <div
+      class="container px-1 md:px-40 my-10 flex flex-col md:flex-row mx-auto justify-center items-center"
+    >
+      <div
+        class="mx-auto px-2 md:px-20 justify-center items-center text-center"
+      >
+        <a
+          href={`/internet-en/${cityData.slug}/#ciudad`}
+          class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+          role="alert"
+        >
+          <span
+            class="text-xs bg-primary-600 rounded-full text-blue-600 px-4 py-1.5 mr-3"
+            >Mira</span
+          >
+          <span class="text-sm font-medium"
+            >¿Cuál es el mejor proveedor de internet en {cityData.name}?</span
+          >
+          <svg
+            class="ml-2 w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd"></path></svg
+          >
+        </a>
+
+        <h1
+          class="mb-4 text-4xl text-slate-200 font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl capitalize"
+        >
+          {cityData.heroTitle}
+        </h1>
+        <p class="mb-8 text-slate-200 text-lg font-normal md:text-xl">
+          <span class="font-bold"
+            >Compara servicios, planes, precios, averigua si llega internet en
+            tu zona</span
+          >
+        </p>
+      </div>
+      <div class="w-full">
+        <img src="/assets/img/logo_bgrem.png" alt="log bgrmove" />
+      </div>
+    </div>
+  </section>
+
+  <Section>
+    <div id="ciudad" class="flex flex-col md:flex-row gap-1 p-0 md:p-3">
+      <div class="px-4">
+        <h2 class="text-center mb-2">
+          {cityData.introTitle}
+        </h2>
+        <p class="text-justify my-2">
+          {cityData.introText}
+        </p>
+        <PorCiudad
+          ciudad={cityData.name}
+          providers={providersInCity}
+          client:visible
+        />
+        <div
+          class="flex flex-col w-full justify-center mx-auto p-3 border shadow-md rounded-md mt-6"
+        >
+          <h2 class="text-center mb-2 capitalize">
+            Encuentra Empresas Internet en {cityData.name}
+          </h2>
+
+          <div class="border border-indigo-700 rounded-md">
+            <iframe
+              src={cityData.mapEmbedUrl}
+              width="100%"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <h2 class="text-center mb-2 mt-4">
+            🏆 Los Mejores Opciones de Internet en {cityData.name}
+          </h2>
+          {
+            cityData.bestProviders.map((provider) => (
+              <Lista
+                titulolista={provider.name}
+                listadescrip={provider.description}
+              />
+            ))
+          }
+
+          <h2 class="text-center my-2">
+            💳 Métodos de pago más usados al pagar internet en {cityData.name}
+          </h2>
+          <p class="text-justify mb-2">
+            Las empresas en {cityData.name} suelen aceptar diversas formas de pago
+            para adaptarse a las necesidades de sus clientes:
+          </p>
+          <Lista
+            titulolista="Transferencias bancarias:"
+            listadescrip="Principalmente a bancos nacionales."
+          />
+          <Lista
+            titulolista="Pago móvil:"
+            listadescrip="Ideal para pagos rápidos y en Bs"
+          />
+          <Lista
+            titulolista="Dólares en efectivo:"
+            listadescrip="Aceptados en oficinas comerciales"
+          />
+          <Lista
+            titulolista="Tarjetas de débito y crédito:"
+            listadescrip="Aceptados en oficinas comerciales"
+          />
+
+          <h2 class="text-center mb-2">
+            ¿Por qué es importante comprobar si hay cobertura de internet en {
+              cityData.name
+            } ?
+          </h2>
+          <p class="text-justify mb-2">
+            La Fibra Óptica es la tecnología que permite transmitir datos a
+            través de pulsos de luz en finos hilos de vidrio o plástico, lo que
+            la hace significativamente más rápida y confiable que otras opciones
+            como el ADSL o el Internet satelital.
+          </p>
+          <p class="text-justify mb-2">
+            No todas las zonas de tu ciudad están cubiertas con servicios de
+            internet por fibra óptica. Por ello, antes de contratar un servicio
+            de Internet, es esencial confirmar que tu domicilio está dentro de
+            la zona de cobertura.
+          </p>
+          <p class="text-justify mb-2">
+            La mayoría de las empresas proveedoras de internet en {
+              cityData.name
+            }
+            han simplificado el proceso de verificación de cobertura a través de sus
+            sitios web.
+          </p>
+
+          <p class="text-justify mb-2">
+            Verificar la cobertura de internet en {cityData.name} te permite:
+          </p>
+          <Lista
+            titulolista="1.- Evitar sorpresas desagradables:"
+            listadescrip="Contratar un servicio que no tiene cobertura en tu zona podría resultar en un mal funcionamiento o, en el peor de los casos, en la imposibilidad de utilizarlo."
+          />
+          <Lista
+            titulolista="2.- Comparar opciones:"
+            listadescrip="Si la Fibra Óptica no está disponible, podrías considerar otras tecnologías disponibles en tu zona, como el ADSL, 4G o Internet satelital."
+          />
+          <Lista
+            titulolista="3.- Tomar decisiones informadas:"
+            listadescrip="Conocer la cobertura y proveedores en tu zona te ayuda a seleccionar el mejor proveedor y plan que se ajuste a tus necesidades de conectividad."
+          />
+
+          <h2 class="text-center mb-2">Preguntas Frecuentes</h2>
+
+          <div id="accordion-collapse" data-accordion="collapse">
+            {
+              cityData.faqs.map((faq, index) => (
+                <Acordeon
+                  id={index + 1}
+                  expandir={index === 0 ? "true" : "false"}
+                  pregunta={faq.question}
+                  respuesta={faq.answer}
+                />
+              ))
+            }
+          </div>
+        </div>
+      </div>
+      <aside class="container max-w-sm p-4 shadow-md rounded-md">
+        <ListaProv />
+        <CiudadLista />
+        <div>
+          <h3>Proveedores de Internet Cerca de Mi</h3>
+          <BotonSimple
+            nombtnsimple="Buscar en tu ciudad"
+            urlbtnsimple="/internet-en/"
+            targtebtnsimple=""
+          />
+        </div>
+        <BannerCotosen />
+      </aside>
+    </div>
+
+    <div
+      class="flex flex-col w-full justify-center items-center mx-auto p-3 border shadow-md bg-gradient-to-r from-indigo-800 to-blue-700 rounded-md mt-6 border-b-8"
+    >
+      <h2 class="text-center text-slate-200 mb-2">
+        ¿Buscas proveedor de internet por fibra óptica?
+      </h2>
+      <Card
+        title="Compañias de Internet en Venezuela"
+        body=""
+        href="/"
+        rel=""
+        target=""
+      />
+    </div>
+    <h3
+      class="text-center text-lg md:text-2xl mt-6 border-b-8 border-amber-500 mb-2"
+    >
+      ¿Cómo medir la velocidad de mi conexión a internet?
+    </h3>
+    <div class="grid grid-cols-2">
+      <Card
+        href="https://www.speedtest.net/es"
+        title="Speed Test"
+        body="De Ookla"
+        rel="noopener noreferrer"
+        target="_blank"
+      />
+      <Card
+        href="https://fiber.google.com/intl/es/speedtest/"
+        title="Google Fiber"
+        body="De Google"
+        rel="noopener noreferrer"
+        target="_blank"
+      />
+      <Card
+        href="https://fast.com/es/"
+        title="Fast"
+        body="De Netflix"
+        rel="noopener noreferrer"
+        target="_blank"
+      />
+      <Card
+        href="https://www.nperf.com/es/"
+        title="Nperf"
+        body="De Francia. ❤️"
+        rel="noopener noreferrer"
+        target="_blank"
+      />
+    </div>
+  </Section>
+  <Cta2 />
+</Layout>

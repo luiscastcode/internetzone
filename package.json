@@ -1,0 +1,30 @@
+{
+  "name": "fibraoptica",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/sitemap": "^3.4.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "astro": "^5.8.0",
+    "astro-icon": "^1.1.1",
+    "flowbite": "^2.5.1",
+    "framer-motion": "^11.3.28",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.7"
+  },
+  "devDependencies": {
+    "@iconify-json/iconamoon": "^1.2.0",
+    "@iconify-json/solar": "^1.2.0"
+  }
+}

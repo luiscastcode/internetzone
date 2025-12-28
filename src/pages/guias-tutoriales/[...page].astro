@@ -1,0 +1,56 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/Section.astro";
+import Heading from "../../components/Heading.astro";
+import PostCard from "../../components/PostCard.astro";
+import { sortPostsByDate } from "../../utils/fecha.formato";
+import Cta2 from "../../components/Cta2.astro";
+import Cta3 from "../../components/Cta3.astro";
+import ListaProv from "../../components/ListaProv.astro";
+import BotonSimple from "../../components/BotonSimple.astro";
+import Paginas from "../../components/Paginas.astro";
+
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await Astro.glob("./*.md");
+  allPosts.sort(sortPostsByDate);
+  return paginate(allPosts, {
+    pageSize: 9,
+  });
+}
+
+const { page } = Astro.props;
+---
+
+<Layout
+  metatitle="Guias y Tutoriales para aprovechar al máximo tu internet"
+  metadescrip="Guias y Tutoriales para aprovechar al máximo tu internet, explora todas las mejores publicaciones que tenemos para ti y que te ayudarań a entnder algunas cosas"
+  slug="guias-tutoriales/"
+  structuredData={{}}
+>
+  <Section>
+    <Heading
+      tituloencabezado="Guias y Tutoriales Blog"
+      subtitulo="Aprovecha Al Máximo Tu Fibra Óptica"
+    />
+    <div class="grid grid-flow-row md:grid-cols-3 gap-1">
+      {
+        page.data.map((post: any) => (
+          <div class="flex mb-1">
+            <PostCard post={post} />
+          </div>
+        ))
+      }
+    </div>
+    <Paginas prevUrl={page.url.prev} nextUrl={page.url.next} />
+
+    <Cta3>
+      <ListaProv />
+      <BotonSimple
+        nombtnsimple="Busca proveedor en tu ciudad"
+        urlbtnsimple="/internet-en/"
+        targtebtnsimple=""
+      />
+    </Cta3>
+  </Section>
+  <Cta2 />
+</Layout>

@@ -1,0 +1,112 @@
+---
+ 
+const dataProveed = [
+  {
+    id: 1,
+    nombre: "Fibex",
+    url: "fibex",
+  },
+  {
+    id: 2,
+    nombre: "Inter",
+    url: "inter",
+  },
+  {
+    id: 3,
+    nombre: "NetUno",
+    url: "netuno",
+  },
+  {
+    id: 4,
+    nombre: "Airtek",
+    url: "airtek",
+  },
+  {
+    id: 5,
+    nombre: "SuperCable",
+    url: "supercable",
+  },
+  {
+    id: 6,
+    nombre: "Vnet",
+    url: "vnet",
+  },
+  {
+    id: 7,
+    nombre: "TecnoNet",
+    url: "tecnonet",
+  },
+  {
+    id: 8,
+    nombre: "WOW",
+    url: "wow",
+  },
+  {
+    id: 9,
+    nombre: "Mds Telecom",
+    url: "mdstelecom",
+  },
+  {
+    id: 10,
+    nombre: "Galanet",
+    url: "galanet",
+  },
+  {
+    id: 11,
+    nombre: "Netcom Plus",
+    url: "netcom",
+  },
+  {
+    id: 12,
+    nombre: "Thundernet",
+    url: "thundernet",
+  },
+   
+];
+---
+
+<button
+  id="dropdownHoverButton"
+  data-dropdown-toggle="dropdownHover"
+  data-dropdown-trigger="hover"
+  class="text-gray-500 hover:font-bold focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center inline-flex items-center"
+  type="button"
+  >Proveedores <svg
+    class="arrow w-2.5 h-2.5 ms-3"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 10 6"
+  >
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="m1 1 4 4 4-4"></path>
+  </svg>
+</button>
+
+<!-- Dropdown menu -->
+<div
+  id="dropdownHover"
+  class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow max-w-md dark:bg-gray-700"
+>
+  <ul
+    class="py-2 text-sm text-gray-900 bg-[#e2e8f0]"
+    aria-labelledby="dropdownHoverButton"
+  >
+    {
+      dataProveed.map((item) => (
+        <li>
+          <a
+            href={`/proveedor/${item.url}/`}
+            class="block px-4 hover:font-bold"
+          >
+            Proveedor de Internet {item.nombre}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

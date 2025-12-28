@@ -1,0 +1,92 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
+import Cta2 from "../components/Cta2.astro";
+
+import Card from "../components/Card.astro";
+import Cta3 from "../components/Cta3.astro";
+import BotonSimple from "../components/BotonSimple.astro";
+---
+
+<Layout
+  metatitle="Contacto Mejor Fibra Óptica"
+  metadescrip="Página de contacto de mejor fibra optica"
+  slug="contacto/"
+>
+  <section class="shadow-md">
+    <div
+      class="py-8 px-4 mx-auto max-w-screen-xl text-justify lg:py-16 lg:px-12"
+    >
+      <h1
+        class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl"
+      >
+        Contacto
+      </h1>
+      <div class="flex justify-center items-center mx-auto mb-4">
+        <img
+          width="650"
+          src="/assets/img/pub/wifisteam.jpg"
+          alt="wifi steampunk"
+          class="rounded-md shadow-sm"
+        />
+      </div>
+
+      <h2 class="text-center">¡Queremos escucharte!</h2>
+      <p class="mb-8 text-lg lg:text-xl sm:px-16 xl:px-48">
+        Tu opinión es muy importante para nosotros. Si tienes alguna sugerencia
+        sobre cómo mejorar nuestro sitio web o si quieres recomendarnos un nuevo
+        proveedor de internet, no dudes en contactarnos. También puedes
+        compartir tu experiencia con nosotros y dejar una reseña sobre el
+        proveedor que elegiste.
+      </p>
+
+      <div class="flex flex-row justify-center mx-auto my-8">
+        <Card
+          href="mailto:cncompusistema@gmail.com"
+          title="cncompusistema@gmail.com"
+          body="Email para sugerencias y aportes"
+          rel=""
+          target=""
+        />
+      </div>
+      <p class="mb-8 text-lg lg:text-xl sm:px-16 xl:px-48">
+        En Mejor Fibra Óptica, estamos comprometidos en ofrecerte la información
+        más actualizada y precisa sobre los proveedores de internet de fibra
+        óptica en Venezuela. Nuestro directorio te ayudará a encontrar la opción
+        perfecta para tus necesidades, ya sea que estés buscando velocidades
+        ultrarrápidas para trabajar desde casa, disfrutar de tus series
+        favoritas en streaming o simplemente mantenerte conectado con tus seres
+        queridos.
+      </p>
+    </div>
+    <h2 class="text-center text-gray-900">¡Te Puede Interesar!</h2>
+    <div class="flex flex-row justify-center mx-auto my-1">
+    
+      <Cta3>
+        <div
+          class="grid grid-row md:grid-cols-3 gap-1 justify-center items-center mx-auto"
+        >
+          <BotonSimple
+            nombtnsimple="Guias Tutoriales"
+            urlbtnsimple="/guias-tutoriales/"
+            targtebtnsimple=""
+          />
+          <BotonSimple
+            nombtnsimple="Encuentra tu proveedor ideal"
+            urlbtnsimple="/internet-en/"
+            targtebtnsimple=""
+          />
+          <BotonSimple
+            nombtnsimple="Guia de Compra Wifi 2025"
+            urlbtnsimple="/guias-tutoriales/9-mejores-routers-wifi6-para-comprar-2024/"
+            targtebtnsimple=""
+          />
+        </div>
+      </Cta3>
+    </div>
+  </section>
+
+  <Section>
+    <Cta2 />
+  </Section>
+</Layout>

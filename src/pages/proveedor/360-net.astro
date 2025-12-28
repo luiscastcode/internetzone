@@ -1,0 +1,267 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/Section.astro";
+import TarjetaPrecio from "../../components/TarjetaPrecio.astro";
+import Cta from "../../components/Cta.astro";
+import Cta4 from "../../components/Cta4.astro";
+import DuoBoton from "../../components/DuoBoton.astro";
+import Valoracion from "../../components/Valoracion.astro";
+import Lista from "../../components/Lista.astro";
+---
+
+<Layout
+  metatitle="➤〖Reseña de 360 Net〗| Proveedor de Internet en Venezuela"
+  metadescrip="Consulta zonas de cobertura, planes y precios 360 Net, empresa dedicada en proveer servicios de fibra óptica y TV con sede en Maracaibo."
+  slug="proveedor/360-net/"
+>
+  <Section>
+    <h1 class="mt-10">Proveedor de Internet en Venezuela</h1>
+    <h2 class="mt-2 text-center">Reseña 360 Net</h2>
+    <div class="grid grid-cols md:grid-cols-2 justify-center gap-2 my-10">
+      <div>
+        <img
+          class="rounded-t-lg p-4"
+          src="../../proveedores/360.jpg"
+          alt="Empresa Fibra Optica 360 Net"
+        />
+      </div>
+      <div class="flex flex-col">
+        <p class="mb-2 text-justify">
+          360Net es un proveedor de servicios de internet ubicado en Turmero,
+          estado Aragua, que se ha destacado en la región por ofrecer una serie
+          de planes flexibles y accesibles, adaptados a las necesidades de los
+          usuarios en su área de cobertura. Esta empresa tiene como objetivo
+          principal garantizar una conexión a internet de calidad, asequible y
+          accesible para usuarios tanto residenciales como comerciales.
+        </p>
+        <DuoBoton nomproveedor="360 Net" slug="360-net" />
+      </div>
+    </div>
+    <div
+      class="grid grid-col md:grid-cols-2 justify-center items-center gap-2 p-4 bg-slate-50 border border-solid border-gray-500 rounded-md"
+    >
+      <div class="p-2">
+        <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+          Valoración General
+        </h2>
+        <Valoracion
+          valorgeneral="7.2"
+          valoracion="Bien para Turmero y zonas vecinas"
+          porcentajecobertura="50%"
+          puntoscobertura="5.3"
+          porcentajeatc="70%"
+          puntosatc="7.2"
+          porcentajeplanes="60%"
+          puntosplanes="6.0"
+          porcentajevelocidad="70%"
+          puntosvelocidad="7.3"
+        />
+      </div>
+      <div
+        class="p-3 border-t-2 md:border-t-0 sm:border-l-0 md:border-l-2 border-slate-400"
+      >
+        <p class="text-justify">
+          Descubre una nueva forma de navegar en internet con <span
+            class="font-bold"
+            >¡360 Net, la empresa de internet emergente en Aragua!.
+          </span> Aunque su presencia es más fuerte en Turmero, están en proceso
+          de expansión a otras áreas dentro del estado.
+        </p>
+        <p class="text-justify">
+          360Net es una excelente opción para quienes buscan flexibilidad y
+          planes asequibles en la región de Turmero, Aragua. Su innovador plan
+          de pago por día y su atención personalizada hacen que sea una opción
+          atractiva para aquellos que necesitan una conexión de calidad, pero no
+          requieren una conexión constante.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-col p-4">
+      <div id="servicios" class="flex flex-col">
+        <h2 class="font-bold text-center border-b-8 border-amber-500">
+          360 Net Planes Y Precios
+        </h2>
+        <p class="mt-4 text-justify">
+          Consulta los precios competitivos de 360 Net, 360Net ofrece diferentes
+          opciones de planes de internet que se adaptan a distintos tipos de
+          uso. Entre los planes más destacados se encuentran:
+        </p>
+        <p class="mt-4 text-justify">
+          <span class="font-bold">Pago por Día:</span> Un plan innovador que permite
+          a los usuarios activar el servicio solo cuando lo necesitan. El costo por
+          día es de $1.3, o bien $9 por semana, ofreciendo una opción económica y
+          flexible para aquellos que no requieren conexión constante.
+        </p>
+        <p class="mt-4 text-justify">
+          <span class="font-bold">Planes Residenciales:</span> Estos incluyen opciones
+          de navegación ilimitada y por consumo diario, diseñados para adaptarse
+          a las necesidades específicas de cada usuario. Los precios varían según
+          el tipo de servicio, y se caracterizan por su accesibilidad
+        </p>
+        <p class="mt-4 text-justify">
+          <span class="font-bold">Costo de Instalación:</span> Segun su página web
+          es gratis. Sin embargo, la empresa se esfuerza por mantener tarifas accesibles
+          para que más personas puedan acceder a sus servicios sin una inversión
+          inicial elevada. Los costos de instalación suelen estar alrededor de los
+          $30, aunque pueden variar según la ubicación exacta del cliente.
+        </p>
+
+        <div class="flex flex-col justify-center items-center mx-auto my-4">
+          <div class="grid grid-cols-1 md:grid-cols-4 my-4">
+            <TarjetaPrecio
+              nombreplan="300 Mbps"
+              precio="35"
+              item1="Ideal Para el hogar"
+              item2="Instalación gratis"
+              item3="Sin interrupciones"
+              item4="Multiples usuarios"
+              url1="https://360net.com.ve/n/promo-instalacion-gratis/"
+            />
+            <TarjetaPrecio
+              nombreplan="600 Megas"
+              precio="40"
+              item1="Multimedia"
+              item2="Buena velocidad"
+              item3="Instalación gratis"
+              item4="Jugar en Línea"
+              url1="https://360net.com.ve/"
+            />
+            <TarjetaPrecio
+              nombreplan="900 Mbps"
+              precio="45"
+              item1="Full HD"
+              item2="Ilimitado"
+              item3="Instalación gratis"
+              item4="Jugar en Línea"
+              url1="https://360net.com.ve/"
+            />
+            <TarjetaPrecio
+              nombreplan="Pago por día 1.3 USD"
+              precio="-"
+              item1="9$ Semanal"
+              item2="300 Mbps"
+              item3="100 Mbps - 1$ por día"
+              item4="7$ Semanal"
+              url1="https://360net.com.ve/"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <Cta4
+      titulocta4="Guia de Routers"
+      urlbotoncta="router-wifi"
+      nomboton="Ver Guia"
+      descripcta="Si necesitan comprar un router wifi-5 o wifi-6 que tenga puerto que soporte 1 Gigabit y que sea doble banda, si no sabes cual, aqui te damos algunas sugerencias."
+    />
+    <div id="pagos" class="my-10">
+      <h2 class="font-bold text-center border-b-8 border-amber-500">
+        Descubre los métodos de pagos 360 Net
+      </h2>
+      <p class="mt-4 text-justify">
+        360 Net te ofrece diferentes medios de pagos online<span
+          class="font-semibold text-indigo-500"
+        >
+          sin moverte de casa</span
+        > a través de su aplicación te resultará facil realizar tus pagos y reportarlos
+        sin necesidad de ir a pagar en alguna oficina comercial, todo desde tu propio
+        teléfono con la app de 360 Net y también desde su web puedes reportar el
+        pago en su <span class="font-semibold text-indigo-500"
+          >portal de pagos</span
+        >.
+      </p>
+
+      <ol class="w-full space-y-1 list-decimal list-inside my-8">
+        <li>
+          <span class="font-semibold text-indigo-500">360 Net Pago Móvil</span>
+          desde cualquier banco con tu numero de telefono.
+        </li>
+
+        <li>
+          <span class="font-semibold text-indigo-500">Banca en linea</span> a través
+          de la aplicación de tu banco para transferencias.
+        </li>
+
+        <li>
+          <span class="font-semibold text-indigo-500">Efectivo o débito</span> En
+          su sede comerciales para pagos en Bs.
+        </li>
+        <li>
+          <span class="font-semibold text-amber-500">Reporte de pagos</span>
+          <span class="font-semibold text-blue-500"
+            ><a href="https://360net.com.ve/reportar-pago" target="_blank">
+              Aqui reportas tu pago
+            </a>
+          </span>
+
+          <a
+            href="https://360net.com.ve/registro"
+            target="_blank"
+            class="text-white w-full bg-[#2557D6] justify-center hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none font-medium rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#2557D6]/50 me-2 mb-2"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-10 h-3 me-2 -ms-1"
+              viewBox="0 0 256 64"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                d="M28.812 0L0 63.76H34.492L38.768 53.594H48.542L52.818 63.76H90.784V56.001L94.167 63.76H113.806L117.189 55.837V63.76H196.148L205.749 53.858L214.739 63.76L255.294 63.842L226.391 32.058L255.294 0H215.368L206.022 9.71899L197.315 0H111.418L104.042 16.457L96.493 0H62.073V7.495L58.244 0C58.244 0 28.812 0 28.812 0ZM35.486 9.05399H52.299L71.41 52.29V9.05399H89.828L104.589 40.054L118.193 9.05399H136.519V54.806H125.368L125.277 18.955L109.02 54.806H99.045L82.697 18.955V54.806H59.757L55.408 44.549H31.912L27.572 54.797H15.281C15.281 54.797 35.486 9.05399 35.486 9.05399ZM146.721 9.05399H192.063L205.931 24.034L220.246 9.05399H234.114L213.043 32.049L234.114 54.779H219.617L205.749 39.625L191.361 54.779H146.721V9.05399ZM43.665 16.795L35.924 35.067H51.397L43.665 16.795ZM157.918 18.527V26.879H182.654V36.188H157.918V45.306H185.663L198.555 31.876L186.21 18.519H157.918V18.527Z"
+                fill="white"></path></svg
+            >
+            Solicita un servicio 360 Net
+          </a>
+        </li>
+        <div id="ventajas" class="my-10">
+          <h2 class="font-bold text-center border-b-8 border-amber-500">
+            ¿Por qué elegir 360 Net?
+          </h2>
+          <p class="mt-4 text-justify">
+            Entre las razones para contratar los servicios de 360 Net se
+            encuentran su velocidad competitiva, la fiabilidad del servicio y su
+            uso de tecnología innovadora. La red de fibra óptica de la empresa
+            es especialmente atractiva para aquellos que requieren internet de
+            alta velocidad y estable para actividades como el teletrabajo, la
+            educación en línea o el entretenimiento digital. Además, la
+            presencia sólida de 360 Net en Zulia y su enfoque regional aseguran
+            un servicio de atención al cliente personalizado y ajustado a las
+            necesidades de los usuarios locales.
+          </p>
+          <Lista
+            titulolista="Cobertura"
+            listadescrip="Presencia sólida de 360 Net en Aragua, servicios en expansión, por ahora en Cagua, Maracay y Turmero."
+          />
+          <Lista
+            titulolista="Velocidad"
+            listadescrip="Los planes están diseñados pensando en diferentes tipos de usuarios, desde aquellos que solo usan redes sociales hasta los que necesitan realizar descargas de gran volumen o ver contenido en streaming."
+          />
+          <Lista
+            titulolista="Precio 360 Net"
+            listadescrip="La opción de pago por día es ideal para aquellos que necesitan una conexión esporádica, lo que les permite ahorrar dinero y tener mayor control sobre su consumo de internet con Instalación GRATIS."
+          />
+          <Lista
+            titulolista="Servicios Adicionales"
+            listadescrip="Además de los planes de internet, 360Net también ofrece otros servicios adicionales que complementan la conectividad, como opciones de asistencia técnica y configuración de redes para empresas y hogares."
+          />
+          <Lista
+            titulolista="Atención al cliente"
+            listadescrip="Se destaca por brindar una atención cercana y personalizada, ofreciendo soporte a través de múltiples canales, como WhatsApp, para resolver dudas y problemas de manera rápida y eficiente. Whatsapp 0424-3000173 "
+          />
+          <div id="ventajas" class="my-10">
+            <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+              ¿Hay Cobertura De Internet 360 Net En Mi Zona?
+            </h2>
+            <Cta
+              titulocta="Oficinas Comerciales 360 Net"
+              descripcta="360Net está trabajando activamente para expandir su cobertura, con el fin de llevar internet de calidad a más hogares y empresas en la región de Aragua. Actualmente, la cobertura está más concentrada en Turmero, Maracay, Cagua pero la empresa tiene planes de seguir creciendo hacia zonas vecinas."
+              urlbotoncta="https://360net.com.ve/"
+              urlbotoncta2="https://360net.com.ve/#cobertura"
+              nomboton="Consultar Zonas"
+            />
+          </div>
+        </div>
+      </ol>
+    </div>
+  </Section></Layout
+>

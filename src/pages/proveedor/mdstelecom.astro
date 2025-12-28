@@ -1,0 +1,219 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/Section.astro";
+import TarjetaPrecio from "../../components/TarjetaPrecio.astro";
+import Cta from "../../components/Cta.astro";
+import DuoBoton from "../../components/DuoBoton.astro";
+import Lista from "../../components/Lista.astro";
+import Valoracion from "../../components/Valoracion.astro";
+import Cta4 from "../../components/Cta4.astro";
+---
+
+<Layout
+  metatitle="➤〖Reseña MDS Telecom〗| Proveedor de Internet en Venezuela"
+  metadescrip="Consulta zonas de cobertura, planes y precios MDS Telecom, operador de telecomunicaciones con presencia en más de 100 ciudades de Venezuela."
+  slug="proveedor/mdstelecom/"
+>
+  <Section>
+    <h1 class="mt-10">Proveedor de Internet en Venezuela</h1>
+    <h2 class="mt-2 text-center">Reseña MDS Telecom</h2>
+    <div class="grid grid-cols md:grid-cols-2 justify-center gap-2 my-10">
+      <div class="flex justify-center items-center mx-auto">
+        <img
+          class="rounded-t-lg p-4"
+          src="../../proveedores/mds.png"
+          alt="Empresa Fibra Optica MDS Telecom"
+        />
+      </div>
+      <div class="flex flex-col">
+        <p class="mb-2 text-justify">
+          MDS Telecom es un operador de telecomunicaciones y proveedor de fibra
+          óptica en el pais, con presencia según su web en más de 100 ciudades
+          de Venezuela.
+        </p>
+        <DuoBoton nomproveedor="MDS Telecom" slug="mdstelecom" />
+      </div>
+    </div>
+    <div
+      class="grid grid-col md:grid-cols-2 justify-center items-center gap-2 p-4 bg-slate-50 border border-solid border-gray-500 rounded-md"
+    >
+      <div class="p-2">
+        <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+          Valoración General
+        </h2>
+        <Valoracion
+          valorgeneral="9.0"
+          valoracion="Excelente por su velocidad"
+          porcentajecobertura="90%"
+          puntoscobertura="9.3"
+          porcentajeatc="85%"
+          puntosatc="8.5"
+          porcentajeplanes="85%"
+          puntosplanes="8.5"
+          porcentajevelocidad="100%"
+          puntosvelocidad="10"
+        />
+      </div>
+      <div
+        class="p-3 border-t-2 md:border-t-0 sm:border-l-0 md:border-l-2 border-slate-400"
+      >
+        <p class="text-justify">
+          Se nota que esta empresa esta invirtiendo en el país, de hecho el
+          proveedor <a href="/proveedor/wow/" class="text-blue-500 font-bold">
+            WOW</a
+          > es una empresa marca de MDS Telecom, se puede notar que su fuerte son
+          las empresas grandes con mucho volumen de tráfico y datos.
+        </p>
+        <p class="text-justify">
+          <span class="font-bold"> MDS Telecom se destaca</span> por su enfoque en
+          la calidad del servicio, respaldado por su Centro de Operaciones de Red
+          (NOC) ubicado en Caracas, que opera 24/7 para garantizar la estabilidad
+          y la rápida resolución de fallas. Además, la empresa cuenta con un equipo
+          de más de 190 profesionales dedicados a la atención al cliente, lo que
+          asegura tiempos de respuesta rápidos: menos de 4 horas en Caracas y menos
+          de 8 horas en el interior del país
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-col p-4">
+      <div id="servicios" class="flex flex-col">
+        <h2 class="font-bold text-center border-b-8 border-amber-500">
+          Planes y Precios MDS Telecom
+        </h2>
+        <p class="mt-4 text-justify">
+          MDS Telecom ofrece una variedad de planes tanto para empresas (pymes y
+          grandes corporaciones) como para usuarios residenciales. Los planes
+          son ajustables según las necesidades de cada cliente, con velocidades
+          que oscilan entre 10 Mbps y más de 100 Mbps, dependiendo de la
+          ubicación y el tipo de cliente. Aunque la empresa no publica los
+          precios exactos en su sitio web, suelen ser personalizados de acuerdo
+          con el requerimiento de cada cliente, lo que ofrece flexibilidad, por
+          lo que habrá que ir a su web llenar un formulario, solicitar la
+          solución que requieras y luego se comunicarán contigo para más
+          información.
+        </p>
+        <p class="mt-4 text-justify">
+          <span class="font-bold"> El costo de instalación </span> varía según la
+          ubicación y el tipo de cliente (residencial o empresarial). En general,
+          las empresas de telecomunicaciones en Venezuela cobran tarifas por instalación
+          que pueden variar dependiendo de la infraestructura existente en la zona,
+          pero MDS Telecom ofrece asesoría personalizada para determinar las tarifas
+          exactas.
+        </p>
+
+        <div class="flex flex-col justify-center items-center mx-auto my-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 my-4">
+            <TarjetaPrecio
+              nombreplan="Soluciones Mbps"
+              precio="?"
+              item1="10 Mbps"
+              item2="50 Mbps"
+              item3="100 Mbps"
+              item4="300 Mbps"
+              url1="https://www.mdstelecom.com.ve/contacto/"
+            />
+            <TarjetaPrecio
+              nombreplan="Soluciones Gbps"
+              precio="?"
+              item1="1 Gbps"
+              item2="2.5 Gbps"
+              item3="5 Gbps"
+              item4="10 Gbps"
+              url1="https://www.mdstelecom.com.ve/contacto/"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <Cta4
+      titulocta4="Guia de Routers"
+      urlbotoncta="router-wifi"
+      nomboton="Ver Guia"
+      descripcta="Si necesitan comprar un router wifi-5 o wifi-6 que tenga puerto que soporte 1 Gigabit y que sea doble banda, si no sabes cual, aqui te damos algunas sugerencias."
+    />
+
+    <div id="pagos" class="my-10">
+      <h2 class="font-bold text-center border-b-8 border-amber-500">
+        Descubre los métodos de pagos de MDS Telecom
+      </h2>
+      <p class="mt-4 text-justify">
+        MDS Telecom ofrece sus servicios solo a grandes empresas corporativas y
+        proveedores por lo que sus pagos no se hacen de la manera tradicional
+        por lo menos en su web no informan nada.
+      </p>
+
+      <ol class="w-full space-y-1 list-decimal list-inside my-8">
+        <li>
+          <span class="font-semibold text-amber-500"
+            >Pago Movil MDS Telecom</span
+          >
+          <span class="font-semibold text-blue-500"
+            >Consultar directamente con MDS Telecom</span
+          >
+        </li>
+
+        <li>
+          <span class="font-semibold text-amber-500">Pagos en dolares</span>
+          <span class="font-semibold text-blue-500"
+            >Consultar directamente con MDS Telecom</span
+          >
+        </li>
+      </ol>
+      <a
+        href="https://www.mdstelecom.com.ve/soluciones/"
+        target="_blank"
+        class="text-white w-full bg-[#2557D6] justify-center hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none font-medium rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#2557D6]/50 me-2 mb-2"
+      >
+        <svg
+          aria-hidden="true"
+          class="w-10 h-3 me-2 -ms-1"
+          viewBox="0 0 256 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            d="M28.812 0L0 63.76H34.492L38.768 53.594H48.542L52.818 63.76H90.784V56.001L94.167 63.76H113.806L117.189 55.837V63.76H196.148L205.749 53.858L214.739 63.76L255.294 63.842L226.391 32.058L255.294 0H215.368L206.022 9.71899L197.315 0H111.418L104.042 16.457L96.493 0H62.073V7.495L58.244 0C58.244 0 28.812 0 28.812 0ZM35.486 9.05399H52.299L71.41 52.29V9.05399H89.828L104.589 40.054L118.193 9.05399H136.519V54.806H125.368L125.277 18.955L109.02 54.806H99.045L82.697 18.955V54.806H59.757L55.408 44.549H31.912L27.572 54.797H15.281C15.281 54.797 35.486 9.05399 35.486 9.05399ZM146.721 9.05399H192.063L205.931 24.034L220.246 9.05399H234.114L213.043 32.049L234.114 54.779H219.617L205.749 39.625L191.361 54.779H146.721V9.05399ZM43.665 16.795L35.924 35.067H51.397L43.665 16.795ZM157.918 18.527V26.879H182.654V36.188H157.918V45.306H185.663L198.555 31.876L186.21 18.519H157.918V18.527Z"
+            fill="white"></path></svg
+        >
+        Soluciones MDS Telecom
+      </a>
+    </div>
+    <div id="ventajas" class="my-10">
+      <h2 class="font-bold text-center border-b-8 border-amber-500">
+        ¿Por Qué Elegir de MDS Telecom?
+      </h2>
+      <Lista
+        titulolista="Cobertura"
+        listadescrip="La red de MDS Telecom abarca más de 450 puntos de presencia en Venezuela. Algunas de las ciudades clave con cobertura incluyen: Carabobo, Bolivar, Lara, Distrito Capital, Miranda, La Guaira, Apure, Mérida, Guarico, Sucre."
+      />
+      <Lista
+        titulolista="Velocidad"
+        listadescrip="Tiene planes exclusivos para empresas de alto tráfico."
+      />
+      <Lista
+        titulolista="Precio MDS Telecom"
+        listadescrip="Se debe consultar en su web en la página de contacto. Aunque algunas opiniones señalan el costo elevado en comparación con otros proveedores locales, muchos clientes aprecian la estabilidad y rapidez del servicio."
+      />
+      <Lista
+        titulolista="Servicios Adicionales"
+        listadescrip="Además del servicio de internet, MDS Telecom también proporciona soluciones de transporte de datos, interconexión con los principales hubs del país y servicios especializados para grandes empresas que requieren ancho de banda dedicado y alta disponibilidad."
+      />
+      <Lista
+        titulolista="Atención al cliente"
+        listadescrip="MDS Telecom es valorada por su capacidad para mantener la continuidad del servicio incluso en condiciones adversas, gracias a la redundancia de su infraestructura. A través del 0212 7201215 o escribir a info@mds-telecom.com ."
+      />
+
+      <div id="ventajas" class="my-10">
+        <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+          ¿Hay Cobertura De Fibra Óptica MDS Telecom En Mi zona?
+        </h2>
+        <Cta
+          titulocta="Oficinas Comerciales MDS Telecom"
+          descripcta="MDS Telecom tiene cobertura de fibra óptica en zonas de 104 ciudades de Venezuela como: Caracas, Margarita, Calabozo, Valencia, La Guaira, Cabimas, Santa RIta, Santa Barbara del Zulia, Tovar, Cumaná."
+          urlbotoncta="https://www.mdstelecom.com.ve/"
+          urlbotoncta2="https://www.mdstelecom.com.ve/nuestra-red/"
+          nomboton="Consultar Internet En Mi Zona"
+        />
+      </div>
+    </div>
+  </Section>
+</Layout>

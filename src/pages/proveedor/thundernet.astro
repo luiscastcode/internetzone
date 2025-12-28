@@ -1,0 +1,328 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/Section.astro";
+import TarjetaPrecio from "../../components/TarjetaPrecio.astro";
+import Cta from "../../components/Cta.astro";
+import DuoBoton from "../../components/DuoBoton.astro";
+import Valoracion from "../../components/Valoracion.astro";
+import Lista from "../../components/Lista.astro";
+import Cta4 from "../../components/Cta4.astro";
+import BotonSimple from "../../components/BotonSimple.astro";
+---
+
+<Layout
+  metatitle="Thundernet: Consulta Cobertura, Planes y Precios, Ofertas, Reseñas"
+  metadescrip="Thundernet consulta zonas de cobertura, planes y precios, proveedores de internet lideres en la región centro occidental."
+  slug="proveedor/thundernet/"
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://mejorfibraoptica.site/proveedor/thundernet/",
+    url: "https://mejorfibraoptica.site/proveedor/thundernet/",
+    name: "Thundernet: Consulta Cobertura, Planes y Precios, Ofertas, Reseñas",
+    description:
+      "Thundernet consulta zonas de cobertura, planes y precios, proveedores de internet lideres en la región centro occidental.",
+    isPartOf: {
+      "@type": "WebSite",
+      url: "https://mejorfibraoptica.site",
+      name: "Mejor Fibra Óptica",
+      description:
+        "Compara empresas de fibra óptica en tu área o ciudad, empresas en Caracas, empresas en Valencia, empresas en Barquisimeto, muchas más ciudades y empresas.",
+    },
+    inLanguage: "es-ES",
+  }}
+>
+  <Section>
+    <section>
+      <div
+        class="container flex flex-col mx-auto px-2 md:px-40 justify-center items-center my-16"
+      >
+        <div class="max-w-3xl">
+          <h1
+            class="mb-4 text-center text-2xl capitalize tracking-tight leading-tight"
+          >
+            Thundernet Proveedor de Internet: Consulta Cobertura, Planes y
+            Precios, Ofertas, Reseñas
+          </h1>
+        </div>
+        <div>
+          <img
+            class="rounded-t-lg p-4"
+            src="../../proveedores/thundernet.png"
+            alt="Empresa Fibra Optica Fibex"
+          />
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="grid grid-cols md:grid-cols-2 justify-center gap-2 my-10">
+        <div class="flex justify-center items-center mx-auto">
+          <img
+            class="rounded-t-lg p-4 rounded-md"
+            src="../../assets/img/pub/promo_thunder.webp"
+            alt="Empresa Fibra Optica Thundernet"
+          />
+        </div>
+        <div class="flex flex-col">
+          <div class="p-2">
+            <h2 class="font-bold text-center border-b-8 border-amber-500 mb-4">
+              Valoración General
+            </h2>
+            <Valoracion
+              valorgeneral="8.0"
+              valoracion="Esta muy bien"
+              porcentajecobertura="80%"
+              puntoscobertura="8.3"
+              porcentajeatc="65%"
+              puntosatc="6.5"
+              porcentajeplanes="80%"
+              puntosplanes="8.0"
+              porcentajevelocidad="90%"
+              puntosvelocidad="9.3"
+            />
+            <DuoBoton nomproveedor="Thundernet" slug="thundernet" />
+          </div>
+          <div class="flex justify-center items-center">
+            <BotonSimple
+              nombtnsimple="Consulta Todas las Oficinas Comerciales Thundernet"
+              urlbtnsimple="https://thundernet.com.ve/oficinas/"
+              targtebtnsimple="_blank"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div
+        class="grid grid-col justify-center items-center gap-2 p-4 bg-slate-50 rounded-md"
+      >
+        <div class="p-3">
+          <h2 class="mt-2 text-center">Thundernet Zonas de Cobertura</h2>
+          <p class="text-justify">
+            Thundernet tiene amplia cobertura de fibra óptica en la región
+            centro occidental y se expande por todo el país, algunas zonas son:
+          </p>
+          <Lista
+            titulolista="Thundernet Barinas"
+            listadescrip="Son lideres en la ciudad de Barinas y zonas aledañas."
+          />
+          <Lista
+            titulolista="Thundernet Guanare"
+            listadescrip="Son lideres en la ciudad de Guanare y zonas aledañas."
+          />
+          <Lista
+            titulolista="Thundernet Apure"
+            listadescrip="Cobertura en San Fernando de Apure."
+          />
+          <Lista
+            titulolista="Thundernet Barquisimeto"
+            listadescrip="Cobertura en el estado Lara."
+          />
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 justify-center items-center"
+          >
+            <BotonSimple
+              nombtnsimple="Consulta La Cobertura Thundernet"
+              urlbtnsimple="https://thundernet.com.ve/cobertura/"
+              targtebtnsimple="_blank"
+            />
+            <BotonSimple
+              nombtnsimple="Consulta Si Hay Thundernet en Tu Ciudad"
+              urlbtnsimple="/internet-en/"
+              targtebtnsimple=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="flex flex-col p-4">
+        <div id="servicios" class="flex flex-col">
+          <h2 class="font-bold text-center">Thundernet Planes y Precios</h2>
+
+          <p class="mt-4 text-justify">
+            <span class="font-bold"
+              >ThunderNet ofrece una variada gama de planes</span
+            >, que van desde 250 Mbps hasta 1 Gbps en fibra óptica GPON,
+            adaptándose a las necesidades tanto de usuarios residenciales como
+            comerciales. Además, es pionera en Venezuela al ofrecer velocidades
+            ultra rápidas de 2.5 Gbps y 10 Gbps mediante la tecnología XG-PON​.
+            Esto coloca a ThunderNet a la vanguardia en términos de conectividad
+            de alta velocidad en el hogar, destaca por sus accesibles precios.
+          </p>
+          <p class="mt-4 text-justify">
+            La expansión de su infraestructura de fibra óptica les ha permitido
+            ofrecer un servicio más robusto y con menor latencia en las áreas
+            donde operan. <span class="font-bold"
+              >El precio de instalación de Thundernet</span
+            > varía según la localidad y el tipo de plan contratado, pero suele ser
+            competitivo en comparación con otros proveedores, facilitando el acceso
+            a una conectividad de calidad a un público más amplio
+          </p>
+
+          <div class="flex flex-col justify-center items-center mx-auto my-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 my-4">
+              <TarjetaPrecio
+                nombreplan="Plan 250"
+                precio="16+IVA"
+                item1="Upload y download equivalentes"
+                item2="Consumo Ilimitado"
+                item3="Thundernet Tv Go Ilimitado"
+                item4="Atención personalizada"
+                url1="https://thundernet.com.ve/"
+              />
+              <TarjetaPrecio
+                nombreplan="Plan 350"
+                precio="25+IVA"
+                item1="Upload y download equivalentes"
+                item2="Full Duplex"
+                item3="Consumo Ilimitado"
+                item4="Thundernet Tv Go Ilimitado"
+                url1="https://thundernet.com.ve/"
+              />
+              <TarjetaPrecio
+                nombreplan="Plan 450"
+                precio="35+IVA"
+                item1="Upload y download equivalentes"
+                item2="Full Duplex"
+                item3="Consumo Ilimitado"
+                item4="Thundernet Tv Go Ilimitado"
+                url1="https://thundernet.com.ve/"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <Cta4
+      titulocta4="Guia de Routers"
+      urlbotoncta="router-wifi"
+      nomboton="Ver Guia"
+      descripcta="Si necesitan comprar un router wifi-5 o wifi-6 que tenga puerto que soporte 1 Gigabit y que sea doble banda, si no sabes cual, aqui te damos algunas sugerencias."
+    />
+    <section>
+      <div id="pagos" class="my-10">
+        <h2 class="font-bold text-center border-b-8 border-amber-500">
+          Descubre los Medios de Pagos de Thundernet
+        </h2>
+        <p class="mt-4 text-justify">
+          Debes ingresar a <a
+            href="https://miportal.somosthunder.net/"
+            target="_blank"
+            class="text-gray-900 font-bold hover:text-amber-300"
+          >
+            "MI PORTAL THUNDERNET"
+          </a> y en la sección de pagos encontrarás las modalidades de pago, nacional
+          e internacional, definidas por cada sede. Ubica la que corresponda a tu
+          ciudad.
+        </p>
+        <h3 class="font-bold">Medios de Pagos Disponibles</h3>
+        <ol class="w-full space-y-1 list-decimal list-inside">
+          <li>
+            <span class="font-semibold text-indigo-500"
+              >¿Como Pagar Thundernet por pago movil?</span
+            >
+            <p class="mt-4 text-justify">
+              Debes ingresar a <a
+                href="https://miportal.somosthunder.net/"
+                target="_blank"
+                class="text-gray-900 font-bold hover:text-amber-300"
+              >
+                "MI PORTAL THUNDERNET"
+              </a> y seguir los pasos, puedes visitar el centro de ayuda.
+            </p>
+
+            <li>
+              <span class="font-semibold text-indigo-500"
+                >Pago Portal Banco de Tesoro</span
+              >, para pagar por este medio debes ir al portal de usuario del
+              Banco del Tesoro y afiliar el servicio, luegor reportas el pago
+              en: <a
+                href="https://miportal.somosthunder.net/"
+                target="_blank"
+                class="text-gray-900 font-bold hover:text-amber-300"
+              >
+                "MI PORTAL THUNDERNET"
+              </a> .
+            </li>
+          </li>
+          <a
+            href="https://thundernet.com.ve/centro-de-ayuda/autogestion-de-pagos/"
+            target="_blank"
+            class="text-white w-full bg-[#2557D6] justify-center hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none font-medium rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#2557D6]/50 me-2 mb-2"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-10 h-3 me-2 -ms-1"
+              viewBox="0 0 256 64"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                d="M28.812 0L0 63.76H34.492L38.768 53.594H48.542L52.818 63.76H90.784V56.001L94.167 63.76H113.806L117.189 55.837V63.76H196.148L205.749 53.858L214.739 63.76L255.294 63.842L226.391 32.058L255.294 0H215.368L206.022 9.71899L197.315 0H111.418L104.042 16.457L96.493 0H62.073V7.495L58.244 0C58.244 0 28.812 0 28.812 0ZM35.486 9.05399H52.299L71.41 52.29V9.05399H89.828L104.589 40.054L118.193 9.05399H136.519V54.806H125.368L125.277 18.955L109.02 54.806H99.045L82.697 18.955V54.806H59.757L55.408 44.549H31.912L27.572 54.797H15.281C15.281 54.797 35.486 9.05399 35.486 9.05399ZM146.721 9.05399H192.063L205.931 24.034L220.246 9.05399H234.114L213.043 32.049L234.114 54.779H219.617L205.749 39.625L191.361 54.779H146.721V9.05399ZM43.665 16.795L35.924 35.067H51.397L43.665 16.795ZM157.918 18.527V26.879H182.654V36.188H157.918V45.306H185.663L198.555 31.876L186.21 18.519H157.918V18.527Z"
+                fill="white"></path></svg
+            >
+            Centro de Gestión de Pagos Thundernet
+          </a>
+        </ol>
+      </div>
+    </section>
+    <Cta4
+      titulocta4="Busca Proveedor en tu ciudad"
+      urlbotoncta="internet-en"
+      nomboton="Accede al Buscador"
+      descripcta="Con solo colocar el nombre exacto de tu ciudad podrás saber cuales proveedores de internet estan cerca de tu zona"
+    />
+    <section>
+      <div id="ventajas" class="my-10">
+        <h2 class="font-bold text-center border-b-8 border-amber-500">
+          ¿Por qué elegir Thundernet?
+        </h2>
+        <Lista
+          titulolista="Cobertura"
+          listadescrip="Expandiendose en el país, son lideres en la ciudad de Barinas, Guanare y zonas aledañas."
+        />
+        <Lista
+          titulolista="Velocidad"
+          listadescrip="Es pionera en Venezuela al ofrecer velocidades ultra rápidas de 2.5 Gbps y 10 Gbps mediante la tecnología XG-PON, siempre ilimitado."
+        />
+        <Lista
+          titulolista="Precio de Instalación de Thundernet"
+          listadescrip="Los precios realmente baratos, empiezan desde 16$+IVA con el plan de 150 mbps."
+        />
+        <Lista
+          titulolista="Servicios Adicionales"
+          listadescrip="Tv Streaming gratis para clientes con el plan 600 Mbps."
+        />
+        <Lista
+          titulolista="Atención al cliente"
+          listadescrip="La velocidad constante y el buen soporte técnico como sus puntos fuertes, teléfono 0800-THUNDER"
+        />
+      </div>
+    </section>
+
+    <section>
+      <div id="cobertura" class="my-10">
+        <h2 class="font-bold text-center border-b-8 border-slate-500 mb-2">
+          Reseña Thundernet
+        </h2>
+        <p class="text-justify">
+          ThunderNet esta orientado al segmento corporativo y residencial, tiene
+          una robusta infraectructura tecnológica de punta y equipos de última
+          tecnología. ThunderNet se ha posicionado como uno de los proveedores
+          de internet más sólidos en Venezuela, gracias a su oferta de planes de
+          fibra óptica, precios competitivos y un enfoque en la satisfacción del
+          cliente.
+        </p>
+      </div>
+    </section>
+
+    <Cta
+      titulocta="Contacto Thundernet"
+      descripcta="Descubrelo clicando en los enlaces que encontrarás abajo, WhatsApp: 0424-5377077"
+      urlbotoncta="https://thundernet.com.ve/"
+      urlbotoncta2="https://thundernet.com.ve/centro-de-ayuda/"
+      nomboton="Centro de Ayuda Thundernet"
+    />
+  </Section>
+</Layout>
